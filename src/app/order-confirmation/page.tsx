@@ -1,18 +1,19 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import { formatINR } from '../../lib/pricing';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 
 export default function OrderConfirmationPage() {
-  const searchParams = useSearchParams();
-  const orderIdParam = searchParams.get('orderId');
-
+  const [orderIdParam, setOrderIdParam] = useState<string | null>(null);
   const [order, setOrder] = useState<any>(null);
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      setOrderIdParam(params.get('orderId'));
+    }
     try {
       const saved = localStorage.getItem('jsr_last_order');
       if (saved) {
