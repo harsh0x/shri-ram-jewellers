@@ -1,0 +1,5482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jai Sri Ram Jewellers | Heritage Fine Jewellery · Jaipur Since 1990</title>
+  <meta name="description"
+    content="Jai Sri Ram Jewellers (Est. 1990, Jaipur). Handcrafted 22K Gold, Polki & Diamond jewellery. Fair Value. Transparent Pricing. Generations of Trust.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <style>
+    /* Neo-Classical Design Tokens */
+    :root {
+      --maroon: #65152F;
+      --maroon-dark: #3B0A1B;
+      --maroon-light: #7D1B3B;
+      --maroon-deep: #250511;
+      --magenta: #A21E58;
+      --magenta-light: #BD296C;
+      --gold: #C4A46C;
+      --gold-light: #E3D2AE;
+      --gold-dark: #967A42;
+      --gold-hairline: rgba(196, 164, 108, 0.45);
+      --gold-glow: rgba(196, 164, 108, 0.2);
+      --ivory: #F7F1E8;
+      --ivory-dark: #EAE1D3;
+      --ivory-card: #FFFFFF;
+      --charcoal: #241C1D;
+      --charcoal-muted: #5C5052;
+      --transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--ivory);
+      color: var(--charcoal);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--maroon);
+      color: var(--gold-light);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .font-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: 0.02em;
+      font-weight: 500;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    button {
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      border: none;
+      background: none;
+      transition: var(--transition);
+    }
+
+    /* Custom Cursor */
+    .custom-cursor-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease-out;
+    }
+
+    .custom-cursor-ring {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 99998;
+      transform: translate(-50%, -50%);
+      transition: transform 0.18s ease-out, width 0.25s, height 0.25s, border-color 0.25s;
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+
+      .custom-cursor-dot,
+      .custom-cursor-ring {
+        display: none !important;
+      }
+    }
+
+    /* Hairlines and Dividers */
+    .gold-divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, var(--gold-hairline) 50%, transparent);
+      margin: 20px 0;
+    }
+
+    .gold-divider-ornate {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 30px auto;
+      max-width: 380px;
+    }
+
+    .gold-divider-ornate .line {
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .gold-divider-ornate .line:last-child {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .gold-divider-ornate .diamond-icon {
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    /* Architectural Jharokha Arch Shape */
+    .jharokha-frame {
+      border-radius: 200px 200px 8px 8px;
+      border: 1px solid var(--gold);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .jharokha-clip {
+      clip-path: polygon(0% 100%,
+          0% 25%,
+          20% 12%,
+          38% 4%,
+          50% 0%,
+          62% 4%,
+          80% 12%,
+          100% 25%,
+          100% 100%);
+    }
+
+    /* Top Draft Policy Banner */
+    .draft-banner {
+      background: linear-gradient(90deg, #3B0A1B, #65152F);
+      color: var(--gold-light);
+      padding: 8px 16px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .draft-banner-content {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .draft-tag {
+      background: var(--gold);
+      color: var(--maroon-dark);
+      padding: 2px 8px;
+      border-radius: 2px;
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Live Gold Rate Ticker */
+    .gold-ticker-bar {
+      background: #250511;
+      color: #E2D8C3;
+      padding: 7px 16px;
+      font-size: 12px;
+      border-bottom: 1px solid rgba(196, 164, 108, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .gold-ticker-items {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ticker-item strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .ticker-item .rate {
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    .ticker-item .delta {
+      color: #4ADE80;
+      font-size: 10px;
+    }
+
+    /* Header & Navigation */
+    header.site-header {
+      background: rgba(247, 241, 232, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(196, 164, 108, 0.35);
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      transition: var(--transition);
+    }
+
+    .header-container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), filter 0.3s ease;
+    }
+
+    .brand-logo-wrap:hover {
+      transform: scale(1.03);
+      filter: drop-shadow(0 4px 14px rgba(101, 21, 47, 0.22));
+    }
+
+    .brand-logo-img {
+      height: 56px;
+      width: auto;
+      max-width: 230px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 6px rgba(59, 10, 27, 0.16));
+      transition: filter 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .brand-logo-img {
+        height: 42px;
+        max-width: 175px;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links li a {
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--charcoal);
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: var(--maroon);
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 1.5px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--maroon);
+      font-size: 13px;
+      position: relative;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+
+    .action-btn:hover {
+      background: rgba(196, 164, 108, 0.12);
+    }
+
+    .badge-count {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background: var(--magenta);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Buttons */
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), #A78446);
+      color: #FFFFFF;
+      padding: 12px 28px;
+      border-radius: 2px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(196, 164, 108, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(196, 164, 108, 0.45);
+      background: linear-gradient(135deg, #DFCA9B, var(--gold));
+      color: #250511;
+    }
+
+    .btn-outline-gold {
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      padding: 11px 26px;
+      border-radius: 2px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-outline-gold:hover {
+      background: var(--gold);
+      color: var(--maroon-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-maroon {
+      background: var(--maroon);
+      color: var(--gold-light);
+      padding: 12px 28px;
+      border-radius: 2px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-maroon:hover {
+      background: var(--maroon-dark);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: radial-gradient(circle at 50% 20%, #4D0E23 0%, var(--maroon-deep) 100%);
+      color: var(--ivory);
+      position: relative;
+      padding: 60px 24px 90px;
+      overflow: hidden;
+    }
+
+    #hero-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .hero-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-content {
+      padding-right: 20px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding: 6px 14px;
+      border: 1px solid var(--gold-hairline);
+      border-radius: 20px;
+      background: rgba(196, 164, 108, 0.08);
+    }
+
+    .hero-headline {
+      font-size: 56px;
+      line-height: 1.12;
+      color: var(--ivory);
+      margin-bottom: 22px;
+    }
+
+    .hero-headline span.gold-text {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .hero-subhead {
+      font-size: 16px;
+      color: #E6DCce;
+      line-height: 1.7;
+      margin-bottom: 34px;
+      max-width: 520px;
+      font-weight: 300;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-visual-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-jharokha-frame {
+      width: 100%;
+      max-width: 500px;
+      height: 600px;
+      border-radius: 250px 250px 12px 12px;
+      border: 2px solid var(--gold);
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+    }
+
+    .hero-jharokha-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.2s ease;
+    }
+
+    .hero-jharokha-frame:hover img {
+      transform: scale(1.05);
+    }
+
+    .hero-badge-overlay {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(37, 5, 17, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--gold);
+      padding: 10px 24px;
+      border-radius: 4px;
+      text-align: center;
+      width: 85%;
+    }
+
+    .hero-badge-overlay .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      color: var(--gold-light);
+    }
+
+    .hero-badge-overlay .desc {
+      font-size: 11px;
+      color: #DAD0BE;
+      letter-spacing: 0.08em;
+    }
+
+    /* Trust Pillars Strip */
+    .trust-strip {
+      background: #FFFFFF;
+      border-bottom: 1px solid rgba(196, 164, 108, 0.25);
+      padding: 30px 24px;
+    }
+
+    .trust-strip-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .trust-pill-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px;
+    }
+
+    .trust-pill-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(196, 164, 108, 0.12);
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--maroon);
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+
+    .trust-pill-text h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--maroon);
+      margin-bottom: 2px;
+    }
+
+    .trust-pill-text p {
+      font-size: 11px;
+      color: var(--charcoal-muted);
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-subtitle {
+      color: var(--gold-dark);
+      font-size: 12px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 42px;
+      color: var(--maroon);
+      line-height: 1.2;
+    }
+
+    .section-desc {
+      max-width: 650px;
+      margin: 12px auto 0;
+      color: var(--charcoal-muted);
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    /* Collections Cards */
+    .collections-section {
+      padding: 90px 24px;
+      background: var(--ivory);
+    }
+
+    .collections-grid {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .collection-card {
+      background: #FFFFFF;
+      border-radius: 120px 120px 8px 8px;
+      border: 1px solid rgba(196, 164, 108, 0.35);
+      overflow: hidden;
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(101, 21, 47, 0.12);
+      border-color: var(--gold);
+    }
+
+    .collection-img-wrap {
+      height: 290px;
+      position: relative;
+      overflow: hidden;
+      background: #F4EFE6;
+    }
+
+    .collection-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .collection-card:hover .collection-img-wrap img {
+      transform: scale(1.08);
+    }
+
+    .collection-info {
+      padding: 24px 20px;
+      text-align: center;
+      background: #FFFFFF;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .collection-title {
+      font-size: 24px;
+      color: var(--maroon);
+      margin-bottom: 6px;
+    }
+
+    .collection-specs {
+      font-size: 12px;
+      color: var(--charcoal-muted);
+      margin-bottom: 14px;
+    }
+
+    .collection-link {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--magenta);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    /* Heritage Section */
+    .heritage-section {
+      background: radial-gradient(circle at 50% 10%, #440D1F 0%, #22040E 100%);
+      color: var(--ivory);
+      padding: 100px 24px;
+      position: relative;
+    }
+
+    .heritage-container {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .heritage-header .section-title {
+      color: var(--ivory);
+    }
+
+    .heritage-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .heritage-timeline::before {
+      content: '';
+      position: absolute;
+      top: 48px;
+      left: 40px;
+      right: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold-hairline), var(--gold), var(--gold-hairline));
+      z-index: 1;
+    }
+
+    .timeline-node {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .timeline-year-bubble {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #250511;
+      border: 2px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 0 25px rgba(196, 164, 108, 0.25);
+      transition: var(--transition);
+    }
+
+    .timeline-node:hover .timeline-year-bubble {
+      transform: scale(1.1);
+      background: var(--maroon);
+      border-color: var(--gold-light);
+    }
+
+    .timeline-year-bubble .year {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .timeline-year-bubble .location {
+      font-size: 9px;
+      color: #DAD0BE;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .timeline-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(196, 164, 108, 0.3);
+      border-radius: 6px;
+      padding: 24px 20px;
+      backdrop-filter: blur(8px);
+      width: 100%;
+    }
+
+    .timeline-card h4 {
+      font-size: 20px;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+
+    .timeline-founder {
+      font-size: 11px;
+      color: var(--magenta-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .timeline-card p {
+      font-size: 13px;
+      color: #E2D7C5;
+      line-height: 1.6;
+    }
+
+    .timeline-quote {
+      margin-top: 14px;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      color: var(--gold);
+    }
+
+    /* Product Catalog Section */
+    .shop-section {
+      padding: 90px 24px;
+      background: var(--ivory);
+    }
+
+    .shop-container {
+      max-width: 1360px;
+      margin: 0 auto;
+    }
+
+    .catalog-controls {
+      background: #FFFFFF;
+      border: 1px solid rgba(196, 164, 108, 0.3);
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin-bottom: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .filter-chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-chip {
+      padding: 8px 18px;
+      border: 1px solid rgba(196, 164, 108, 0.4);
+      background: #FAF7F2;
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--charcoal);
+      transition: var(--transition);
+    }
+
+    .filter-chip:hover,
+    .filter-chip.active {
+      background: var(--maroon);
+      color: var(--gold-light);
+      border-color: var(--maroon);
+    }
+
+    .catalog-search-sort {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-input {
+      padding: 8px 16px 8px 36px;
+      border: 1px solid rgba(196, 164, 108, 0.4);
+      border-radius: 30px;
+      background: #FAF7F2;
+      font-size: 13px;
+      font-family: 'Montserrat', sans-serif;
+      width: 220px;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--maroon);
+      background: #FFF;
+      box-shadow: 0 0 10px rgba(101, 21, 47, 0.1);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold-dark);
+      font-size: 14px;
+    }
+
+    .sort-select {
+      padding: 8px 16px;
+      border: 1px solid rgba(196, 164, 108, 0.4);
+      border-radius: 30px;
+      background: #FAF7F2;
+      font-size: 13px;
+      font-family: 'Montserrat', sans-serif;
+      outline: none;
+      color: var(--charcoal);
+    }
+
+    /* Product Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .product-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(196, 164, 108, 0.25);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(101, 21, 47, 0.1);
+      border-color: var(--gold);
+    }
+
+    .product-badge-wrap {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .p-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    .tag-bestseller {
+      background: var(--maroon);
+      color: var(--gold-light);
+    }
+
+    .tag-hallmark {
+      background: #250511;
+      color: #FFF;
+      border: 1px solid var(--gold);
+    }
+
+    .tag-certified {
+      background: var(--magenta);
+      color: #FFF;
+    }
+
+    .wishlist-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 5;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(196, 164, 108, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--charcoal);
+      font-size: 14px;
+    }
+
+    .wishlist-btn:hover,
+    .wishlist-btn.active {
+      color: var(--magenta);
+      background: #FFF;
+    }
+
+    .product-img-box {
+      height: 280px;
+      position: relative;
+      background: #F8F4EC;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .product-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease, opacity 0.5s ease;
+    }
+
+    .product-card:hover .product-img-box img {
+      transform: scale(1.06);
+    }
+
+    .quick-view-btn {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(37, 5, 17, 0.9);
+      color: var(--gold-light);
+      padding: 8px 18px;
+      border-radius: 2px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--gold);
+      opacity: 0;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .product-card:hover .quick-view-btn {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .product-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .product-category-sub {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .product-title {
+      font-size: 19px;
+      color: var(--maroon);
+      margin-bottom: 8px;
+      line-height: 1.25;
+      cursor: pointer;
+    }
+
+    .product-title:hover {
+      color: var(--magenta);
+    }
+
+    .product-spec-pill {
+      font-size: 11px;
+      color: var(--charcoal-muted);
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    .price-box {
+      margin-top: 10px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(196, 164, 108, 0.25);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .price-label {
+      font-size: 10px;
+      color: var(--charcoal-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .price-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--maroon);
+      line-height: 1;
+    }
+
+    .price-sub {
+      font-size: 10px;
+      color: #6B7280;
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .btn-card-breakdown {
+      padding: 8px 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--gold);
+      color: var(--maroon);
+      border-radius: 2px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .btn-card-breakdown:hover {
+      background: rgba(196, 164, 108, 0.15);
+    }
+
+    .btn-card-add {
+      padding: 8px 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--maroon);
+      color: var(--gold-light);
+      border-radius: 2px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .btn-card-add:hover {
+      background: var(--maroon-dark);
+      color: #FFF;
+    }
+
+    /* Modal Styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(20, 3, 9, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-y: auto;
+    }
+
+    .modal-content {
+      background: #FFFFFF;
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      max-width: 980px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #FAF7F2;
+      border: 1px solid var(--gold);
+      color: var(--maroon);
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--maroon);
+      color: var(--gold-light);
+    }
+
+    /* Product Detail Modal Layout */
+    .pdm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      padding: 36px;
+    }
+
+    .pdm-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pdm-main-img-box {
+      height: 380px;
+      border-radius: 4px;
+      border: 1px solid rgba(196, 164, 108, 0.3);
+      overflow: hidden;
+      background: #F8F4EC;
+      position: relative;
+    }
+
+    .pdm-main-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .pdm-main-img-box:hover img {
+      transform: scale(1.4);
+      cursor: crosshair;
+    }
+
+    .pdm-thumbs {
+      display: flex;
+      gap: 10px;
+    }
+
+    .pdm-thumb {
+      width: 70px;
+      height: 70px;
+      border-radius: 4px;
+      border: 1px solid rgba(196, 164, 108, 0.3);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .pdm-thumb.active {
+      border: 2px solid var(--maroon);
+    }
+
+    .pdm-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pdm-360-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--maroon);
+      font-weight: 600;
+      background: rgba(196, 164, 108, 0.15);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-top: 8px;
+      width: fit-content;
+    }
+
+    /* Price Breakdown Calculator */
+    .price-breakdown-card {
+      background: #FAF7F2;
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .pb-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(196, 164, 108, 0.35);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .pb-header h4 {
+      font-size: 18px;
+      color: var(--maroon);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pb-badge {
+      font-size: 10px;
+      background: var(--maroon);
+      color: var(--gold-light);
+      padding: 2px 8px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .pb-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      padding: 5px 0;
+      color: var(--charcoal);
+    }
+
+    .pb-row.total-row {
+      border-top: 2px solid var(--gold);
+      margin-top: 8px;
+      padding-top: 10px;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--maroon);
+    }
+
+    .pb-formula-note {
+      font-size: 11px;
+      color: #6B7280;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Interactive Gold Rate Slider in Breakdown */
+    .slider-wrap {
+      margin: 12px 0;
+      background: #FFFFFF;
+      padding: 10px 14px;
+      border-radius: 4px;
+      border: 1px dashed var(--gold);
+    }
+
+    .slider-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--maroon);
+      margin-bottom: 6px;
+    }
+
+    .rate-slider {
+      width: 100%;
+      accent-color: var(--gold);
+    }
+
+    /* Pincode Estimator */
+    .pincode-card {
+      margin: 16px 0;
+      padding: 14px;
+      background: #FFFFFF;
+      border: 1px solid rgba(196, 164, 108, 0.3);
+      border-radius: 4px;
+    }
+
+    .pincode-form {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pincode-input {
+      padding: 8px 12px;
+      border: 1px solid #D1D5DB;
+      border-radius: 2px;
+      font-size: 13px;
+      width: 140px;
+    }
+
+    .pincode-result {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #047857;
+      font-weight: 500;
+    }
+
+    /* Accordions */
+    .accordion-item {
+      border-bottom: 1px solid rgba(196, 164, 108, 0.25);
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      text-align: left;
+      padding: 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--maroon);
+    }
+
+    .accordion-content {
+      padding-bottom: 14px;
+      font-size: 12px;
+      color: var(--charcoal-muted);
+      line-height: 1.6;
+      display: none;
+    }
+
+    .accordion-content.open {
+      display: block;
+    }
+
+    /* Quality Assurance Section */
+    .quality-section {
+      padding: 90px 24px;
+      background: #FAF7F2;
+    }
+
+    .qa-grid {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .qa-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(196, 164, 108, 0.3);
+      border-radius: 6px;
+      padding: 30px 24px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .qa-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(101, 21, 47, 0.08);
+      border-color: var(--gold);
+    }
+
+    .qa-icon-wrap {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(196, 164, 108, 0.12);
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--maroon);
+      font-size: 26px;
+      margin: 0 auto 18px;
+    }
+
+    .qa-card h4 {
+      font-size: 22px;
+      color: var(--maroon);
+      margin-bottom: 10px;
+    }
+
+    .qa-card p {
+      font-size: 13px;
+      color: var(--charcoal-muted);
+      line-height: 1.6;
+    }
+
+    /* Interactive "Know Your Jewellery" Guide Component */
+    .know-guide-section {
+      background: radial-gradient(circle at 50% 20%, #4D0E23 0%, var(--maroon-deep) 100%);
+      color: var(--ivory);
+      padding: 90px 24px;
+    }
+
+    .guide-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+    }
+
+    .guide-tab-btn {
+      padding: 10px 24px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      color: var(--gold-light);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .guide-tab-btn.active,
+    .guide-tab-btn:hover {
+      background: var(--gold);
+      color: var(--maroon-dark);
+    }
+
+    .guide-panel {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(196, 164, 108, 0.35);
+      border-radius: 8px;
+      padding: 36px;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Policies Hub Section */
+    .policy-section {
+      padding: 90px 24px;
+      background: #FFFFFF;
+    }
+
+    .policy-hub-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .policy-tabs-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      border-bottom: 2px solid rgba(196, 164, 108, 0.3);
+      margin-bottom: 30px;
+    }
+
+    .policy-tab-item {
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      color: var(--charcoal);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -14px;
+    }
+
+    .policy-tab-item.active {
+      color: var(--maroon);
+      border-bottom: 2px solid var(--maroon);
+    }
+
+    .policy-content-box {
+      background: #FAF7F2;
+      border: 1px solid rgba(196, 164, 108, 0.35);
+      border-radius: 6px;
+      padding: 36px;
+    }
+
+    .policy-heading {
+      font-size: 28px;
+      color: var(--maroon);
+      margin-bottom: 6px;
+    }
+
+    .policy-subheading {
+      font-size: 14px;
+      color: var(--magenta);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .policy-text-list {
+      list-style-type: decimal;
+      padding-left: 20px;
+      color: var(--charcoal);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .policy-text-list li {
+      margin-bottom: 10px;
+    }
+
+    .policy-operational-note {
+      background: rgba(162, 30, 88, 0.08);
+      border-left: 3px solid var(--magenta);
+      padding: 12px 18px;
+      font-size: 12px;
+      color: var(--maroon);
+      margin-top: 20px;
+    }
+
+    /* Testimonials Carousel */
+    .testimonials-section {
+      padding: 90px 24px;
+      background: var(--ivory);
+      text-align: center;
+    }
+
+    .testimonials-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .placeholder-alert {
+      display: inline-block;
+      background: rgba(196, 164, 108, 0.2);
+      border: 1px dashed var(--gold);
+      color: var(--maroon);
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+      letter-spacing: 0.05em;
+    }
+
+    .testimonial-slide {
+      background: #FFFFFF;
+      border: 1px solid rgba(196, 164, 108, 0.35);
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-style: italic;
+      color: var(--maroon);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: var(--charcoal);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .testimonial-meta {
+      font-size: 12px;
+      color: var(--gold-dark);
+    }
+
+    /* Showroom & Appointment Booking Section */
+    .showroom-section {
+      padding: 90px 24px;
+      background: radial-gradient(circle at 50% 10%, #3B0A1B 0%, #20040D 100%);
+      color: var(--ivory);
+    }
+
+    .showroom-grid {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .showroom-info h3 {
+      font-size: 38px;
+      color: var(--gold-light);
+      margin-bottom: 16px;
+    }
+
+    .showroom-address-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(196, 164, 108, 0.3);
+      padding: 24px;
+      border-radius: 6px;
+      margin: 24px 0;
+    }
+
+    .showroom-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #E2D7C5;
+    }
+
+    .booking-card {
+      background: #FFFFFF;
+      color: var(--charcoal);
+      border-radius: 6px;
+      padding: 36px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--gold);
+    }
+
+    .booking-card h4 {
+      font-size: 26px;
+      color: var(--maroon);
+      margin-bottom: 6px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--maroon);
+      margin-bottom: 6px;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #D1D5DB;
+      border-radius: 2px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: var(--maroon);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* Cart Drawer */
+    .cart-drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 99990;
+      display: none;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -450px;
+      width: 440px;
+      max-width: 90vw;
+      height: 100%;
+      background: #FFFFFF;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
+      z-index: 99991;
+      transition: right 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-drawer.open {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 20px 24px;
+      background: var(--maroon);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cart-header h3 {
+      font-size: 20px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .cart-items-wrap {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 24px;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #F0ECE4;
+      align-items: center;
+    }
+
+    .cart-item-img {
+      width: 65px;
+      height: 65px;
+      border-radius: 4px;
+      object-fit: cover;
+      background: #F4EFE6;
+      border: 1px solid rgba(196, 164, 108, 0.3);
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--maroon);
+      line-height: 1.25;
+    }
+
+    .cart-item-spec {
+      font-size: 11px;
+      color: #6B7280;
+    }
+
+    .cart-item-price {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--charcoal);
+      margin-top: 4px;
+    }
+
+    .cart-qty-ctrl {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .qty-btn {
+      width: 22px;
+      height: 22px;
+      border: 1px solid #D1D5DB;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .cart-footer {
+      padding: 24px;
+      background: #FAF7F2;
+      border-top: 1px solid rgba(196, 164, 108, 0.3);
+    }
+
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--maroon);
+      margin-bottom: 16px;
+    }
+
+    /* Razorpay High-Fidelity Simulation Modal */
+    .razorpay-modal-box {
+      max-width: 460px;
+      background: #FFFFFF;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+      border: 1px solid #E5E7EB;
+    }
+
+    .rp-header {
+      background: #0C2340;
+      color: #FFFFFF;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .rp-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rp-badge-test {
+      background: #F59E0B;
+      color: #000;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+
+    .rp-body {
+      padding: 24px;
+    }
+
+    .rp-pay-method {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid #E5E7EB;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .rp-pay-method:hover,
+    .rp-pay-method.selected {
+      border-color: #2563EB;
+      background: #EFF6FF;
+    }
+
+    /* Admin Live Rate Editor Panel */
+    .admin-float-btn {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: var(--maroon);
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      z-index: 850;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .admin-modal-box {
+      max-width: 500px;
+      padding: 30px;
+      background: #FFFFFF;
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+    }
+
+    /* Cinematic Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--maroon-deep);
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    .preloader-logo-wrap {
+      margin-bottom: 24px;
+      animation: preloaderPulse 2.4s ease-in-out infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .preloader-logo-img {
+      max-width: 340px;
+      width: 82vw;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 30px rgba(227, 210, 174, 0.45));
+    }
+
+    @keyframes preloaderPulse {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 20px rgba(196, 164, 108, 0.35));
+      }
+      50% {
+        transform: scale(1.035);
+        filter: drop-shadow(0 0 40px rgba(227, 210, 174, 0.7));
+      }
+    }
+
+    .preloader-text {
+      color: var(--gold-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeInUp 1s 0.8s forwards;
+    }
+
+    .preloader-tagline {
+      color: #DAD0BE;
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-top: 8px;
+      opacity: 0;
+      animation: fadeInUp 1s 1.2s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #1C030B;
+      color: #D6CEBE;
+      border-top: 1px solid var(--gold-hairline);
+      padding: 70px 24px 30px;
+    }
+
+    .footer-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand h4 {
+      font-size: 24px;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #A99F8D;
+      max-width: 380px;
+    }
+
+    .footer-col h5 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links li a {
+      font-size: 13px;
+      color: #C0B7A6;
+    }
+
+    .footer-links li a:hover {
+      color: var(--gold-light);
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(196, 164, 108, 0.2);
+      padding-top: 24px;
+      max-width: 1320px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #8C8270;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-subhead {
+        margin: 0 auto 30px;
+      }
+
+      .hero-cta-group {
+        justify-content: center;
+      }
+
+      .collections-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .heritage-timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .heritage-timeline::before {
+        display: none;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .qa-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .showroom-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-strip-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pdm-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block !important;
+      }
+
+      .hero-headline {
+        font-size: 38px;
+      }
+
+      .collections-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .heritage-timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qa-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-strip-container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      font-size: 20px;
+      color: var(--maroon);
+    }
+
+    /* Mobile drawer */
+    .mobile-nav-drawer {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 280px;
+      height: 100%;
+      background: var(--maroon-deep);
+      color: var(--ivory);
+      z-index: 99995;
+      transition: left 0.3s ease;
+      padding: 30px 20px;
+    }
+
+    .mobile-nav-drawer.open {
+      left: 0;
+    }
+
+    .mobile-nav-drawer a {
+      display: block;
+      padding: 12px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-bottom: 1px solid rgba(196, 164, 108, 0.2);
+      color: var(--ivory);
+    }
+
+    /* Modal Overlays & Components */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 3, 7, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 99992;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-box {
+      background: #FFFFFF;
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+      max-width: 820px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 24px;
+      color: var(--maroon);
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .pdm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .pdm-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pdm-main-img-box {
+      width: 100%;
+      height: 360px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #FAF7F2;
+      border: 1px solid rgba(196, 164, 108, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pdm-main-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .pdm-thumbs {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      overflow-x: auto;
+    }
+
+    .pdm-thumb {
+      width: 60px;
+      height: 60px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    .pdm-thumb.active {
+      border-color: var(--maroon);
+      opacity: 1;
+    }
+
+    .pdm-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pdm-360-badge {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--gold-dark);
+      background: rgba(196, 164, 108, 0.1);
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: 1px dashed var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Price breakdown inside modal */
+    .price-breakdown-card {
+      background: var(--ivory);
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      padding: 16px;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+
+    .pb-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .pb-row.total-row {
+      border-top: 1px solid var(--gold);
+      padding-top: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--maroon);
+    }
+
+    .pb-formula-note {
+      font-size: 10.5px;
+      color: #6B7280;
+      margin-top: 10px;
+      line-height: 1.4;
+      border-top: 1px dashed rgba(196, 164, 108, 0.4);
+      padding-top: 8px;
+    }
+
+    .pincode-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      padding: 14px;
+      border-radius: 4px;
+      margin: 16px 0;
+    }
+
+    .pincode-form {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pincode-input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      font-size: 13px;
+      font-family: monospace;
+    }
+
+    .pincode-result {
+      font-size: 11.5px;
+      margin-top: 6px;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid rgba(196, 164, 108, 0.3);
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      text-align: left;
+      padding: 12px 0;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--maroon);
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .accordion-content {
+      display: none;
+      padding-bottom: 12px;
+      font-size: 12px;
+      color: #4B5563;
+      line-height: 1.5;
+    }
+
+    .accordion-content.open {
+      display: block;
+    }
+
+    /* Shoppable Reels Section */
+    .reels-section {
+      padding: 90px 24px;
+      background: var(--ivory);
+      position: relative;
+      border-bottom: 1px solid rgba(196, 164, 108, 0.3);
+      overflow: hidden;
+    }
+
+    .reels-container {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .reels-coverflow-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      min-height: 560px;
+    }
+
+    .reels-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+      position: relative;
+      width: 100%;
+    }
+
+    .reel-coverflow-card {
+      position: relative;
+      width: 320px;
+      aspect-ratio: 9/16;
+      border-radius: 140px 140px 16px 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      box-shadow: 0 20px 45px -10px rgba(101, 21, 47, 0.35);
+      background: var(--maroon-deep);
+      border: 2px solid rgba(196, 164, 108, 0.4);
+      margin: 0 -85px;
+      flex-shrink: 0;
+    }
+
+    .reel-coverflow-card.active {
+      z-index: 30;
+      transform: scale(1) translateZ(0) rotateY(0deg);
+      border-color: var(--gold);
+      box-shadow: 0 30px 70px -15px rgba(101, 21, 47, 0.55);
+      opacity: 1;
+    }
+
+    .reel-coverflow-card.side-left {
+      z-index: 20;
+      transform: scale(0.85) translateZ(-80px) rotateY(28deg);
+      opacity: 0.75;
+    }
+
+    .reel-coverflow-card.side-right {
+      z-index: 20;
+      transform: scale(0.85) translateZ(-80px) rotateY(-28deg);
+      opacity: 0.75;
+    }
+
+    .reel-coverflow-card.far-left,
+    .reel-coverflow-card.far-right {
+      z-index: 10;
+      transform: scale(0.72) translateZ(-160px);
+      opacity: 0.4;
+    }
+
+    .reel-coverflow-card video,
+    .reel-coverflow-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reel-nav-btn {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1px solid var(--gold);
+      color: var(--maroon);
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 40;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+    }
+
+    .reel-nav-btn:hover {
+      background: var(--gold);
+      color: var(--maroon-deep);
+      transform: scale(1.1);
+    }
+
+    .reel-nav-btn.prev { left: 20px; }
+    .reel-nav-btn.next { right: 20px; }
+
+    .reel-chips-strip {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      z-index: 15;
+    }
+
+    .reel-chip-pill {
+      background: rgba(26, 5, 16, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(196, 164, 108, 0.4);
+      border-radius: 8px;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ivory);
+      font-size: 11px;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .reel-chip-pill:hover {
+      border-color: var(--gold);
+      background: rgba(37, 5, 22, 0.95);
+      transform: translateY(-2px);
+    }
+
+    .reel-chip-pill img {
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .reel-dots-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .reel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(196, 164, 108, 0.3);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .reel-dot.active {
+      width: 28px;
+      border-radius: 12px;
+      background: var(--gold);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Custom Luxury Gold Cursor on Desktop -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing"></div>
+
+  <!-- Cinematic Preloader -->
+  <div id="preloader">
+    <div class="preloader-logo-wrap">
+      <img src="logo.png" alt="Jai Sri Ram Jewellers Jaipur" class="preloader-logo-img">
+    </div>
+    <div class="preloader-tagline">Fine Jewellery · Fair Value · Generations of Trust</div>
+    <button onclick="dismissPreloader()"
+      style="margin-top:24px; color:rgba(196,164,108,0.7); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; border:1px solid rgba(196,164,108,0.3); padding:4px 12px; border-radius:20px; cursor:pointer;">Skip
+      Intro</button>
+  </div>
+
+  <!-- Top Draft Policy Notice Banner -->
+  <div class="draft-banner" id="draftBanner">
+    <div class="draft-banner-content">
+      <span class="draft-tag">Draft Proposal</span>
+      <span>Website customer policies are proposed drafts subject to final management approval and legal review under
+        Indian E-Commerce rules.</span>
+      <a href="#policies" onclick="openPolicyTab('14-day-exchange')"
+        style="text-decoration:underline; font-weight:600; color:#FFF; margin-left:6px;">Review Terms</a>
+    </div>
+    <button onclick="document.getElementById('draftBanner').style.display='none'"
+      style="color:var(--gold-light); font-size:16px;">✕</button>
+  </div>
+
+  <!-- Live Benchmark Gold Rate Ticker -->
+  <div class="gold-ticker-bar">
+    <div class="gold-ticker-items">
+      <div class="ticker-item">
+        <span>📍 <strong>Jaipur Bullion Live:</strong></span>
+      </div>
+      <div class="ticker-item">
+        <span>24K Gold (999):</span>
+        <span class="rate" id="ticker24k">₹7,845/g</span>
+        <span class="delta">▲ ₹24</span>
+      </div>
+      <div class="ticker-item">
+        <span>22K BIS Hallmarked:</span>
+        <span class="rate" id="ticker22k">₹7,192/g</span>
+        <span class="delta">▲ ₹22</span>
+      </div>
+      <div class="ticker-item">
+        <span>18K Diamond Setting:</span>
+        <span class="rate" id="ticker18k">₹5,884/g</span>
+        <span class="delta">▲ ₹18</span>
+      </div>
+      <div class="ticker-item">
+        <span>Pure Silver 999:</span>
+        <span class="rate">₹96.50/g</span>
+        <span class="delta">▲ ₹0.45</span>
+      </div>
+      <div class="ticker-item" style="margin-left:auto;">
+        <button onclick="openRateAdjusterModal()" style="background:var(--gold); color:var(--maroon-deep); font-weight:700; font-size:10.5px; padding:3px 10px; border-radius:3px; text-transform:uppercase; letter-spacing:0.05em; cursor:pointer; border:none;">
+          ⚙️ Adjust Rates
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <button class="mobile-menu-btn" onclick="toggleMobileNav()">☰</button>
+
+      <!-- Brand Identity -->
+      <a href="#" class="brand-logo-wrap" title="Jai Sri Ram Jewellers · Jaipur Since 1990">
+        <img src="logo.png" alt="Jai Sri Ram Jewellers Jaipur" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-links">
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#heritage">Heritage 1990</a></li>
+        <li><a href="#quality">Quality Assurance</a></li>
+        <li><a href="#shop">Shop Catalogue</a></li>
+        <li><a href="#policies">Policies (Draft)</a></li>
+        <li><a href="#showroom">Showroom Visit</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <button class="action-btn" onclick="openWishlistModal()" title="View Wishlist">
+          <span>♡</span>
+          <span style="display:none;" class="desktop-only-text">Saved</span>
+          <span class="badge-count" id="wishlistCount">0</span>
+        </button>
+        <button class="action-btn" onclick="openCartDrawer()" title="Shopping Bag">
+          <span>🛍</span>
+          <span style="font-weight:600;">Bag</span>
+          <span class="badge-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid rgba(196,164,108,0.25);">
+      <a href="#" onclick="toggleMobileNav()" style="border:none; padding:0;">
+        <img src="logo.png" alt="Jai Sri Ram Jewellers" style="height:44px; width:auto; filter:drop-shadow(0 2px 10px rgba(196,164,108,0.4));">
+      </a>
+      <button onclick="toggleMobileNav()" style="color:#FFF; font-size:22px; cursor:pointer;">✕</button>
+    </div>
+    <a href="#collections" onclick="toggleMobileNav()">Collections</a>
+    <a href="#heritage" onclick="toggleMobileNav()">Heritage Story</a>
+    <a href="#quality" onclick="toggleMobileNav()">Quality Assurance</a>
+    <a href="#shop" onclick="toggleMobileNav()">Shop Catalogue (24 Pieces)</a>
+    <a href="#policies" onclick="toggleMobileNav()">Customer Policies</a>
+    <a href="#showroom" onclick="toggleMobileNav()">Book Showroom Visit</a>
+    <div style="margin-top:30px; font-size:12px; color:var(--gold-light);">
+      <p>📍 Johari Bazar, Jaipur</p>
+      <p>📞 +91 141 256 9090</p>
+    </div>
+  </div>
+
+  <!-- Hero Section with Jharokha Arch Window & Gold Shimmer Canvas -->
+  <section class="hero-section">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span>⚜</span>
+          <span>Heritage Jaipur Fine Jewellery</span>
+        </div>
+        <h1 class="hero-headline">
+          Fine Jewellery.<br>
+          <span class="gold-text">Fair Value.</span><br>
+          Generations of Trust.
+        </h1>
+        <p class="hero-subhead">
+          Born in 1990 near Bikaner and rooted in the Pink City of Jaipur. Discover regal Kundan Polki, 22K hallmarked
+          gold, and natural certified diamonds presented with unmatched transparency and lifetime care.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#shop" class="btn-gold">Explore Collections →</a>
+          <a href="#showroom" class="btn-outline-gold">Book Showroom Visit</a>
+        </div>
+
+        <div
+          style="margin-top:36px; display:flex; gap:24px; border-top:1px solid rgba(196,164,108,0.3); padding-top:20px;">
+          <div>
+            <div
+              style="font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--gold-light); font-weight:700;">
+              1990</div>
+            <div style="font-size:11px; color:#D6CEBE; text-transform:uppercase; letter-spacing:0.08em;">Heritage Legacy
+            </div>
+          </div>
+          <div style="border-left:1px solid rgba(196,164,108,0.3); padding-left:20px;">
+            <div
+              style="font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--gold-light); font-weight:700;">
+              100%</div>
+            <div style="font-size:11px; color:#D6CEBE; text-transform:uppercase; letter-spacing:0.08em;">BIS Hallmarked
+              & HUID</div>
+          </div>
+          <div style="border-left:1px solid rgba(196,164,108,0.3); padding-left:20px;">
+            <div
+              style="font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--gold-light); font-weight:700;">
+              14-Day</div>
+            <div style="font-size:11px; color:#D6CEBE; text-transform:uppercase; letter-spacing:0.08em;">Exchange
+              Promise</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Architectural Jharokha Framing the Masterpiece Necklace -->
+      <div class="hero-visual-wrap">
+        <div class="hero-jharokha-frame">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
+            alt="Mehrangarh Royal Polki & Emerald Choker" id="heroFeaturedImg">
+          <div class="hero-badge-overlay">
+            <div class="title">The Mehrangarh Royal Polki Choker</div>
+            <div class="desc">22K Gold · 18.20ct Syndicate Polki · Zambian Emeralds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Foundational Trust Pillars Strip -->
+  <section class="trust-strip">
+    <div class="trust-strip-container">
+      <div class="trust-pill-item">
+        <div class="trust-pill-icon">🏛</div>
+        <div class="trust-pill-text">
+          <h4>Heritage Since 1990</h4>
+          <p>Family-led trust rooted in wholesale mastery.</p>
+        </div>
+      </div>
+      <div class="trust-pill-item">
+        <div class="trust-pill-icon">⚖</div>
+        <div class="trust-pill-text">
+          <h4>Fair & Transparent Pricing</h4>
+          <p>Exact gold weight, stone values & making charges disclosed.</p>
+        </div>
+      </div>
+      <div class="trust-pill-item">
+        <div class="trust-pill-icon">💎</div>
+        <div class="trust-pill-text">
+          <h4>BIS 916 & HUID Verified</h4>
+          <p>100% hallmarked gold & certified natural stones.</p>
+        </div>
+      </div>
+      <div class="trust-pill-item">
+        <div class="trust-pill-icon">🔄</div>
+        <div class="trust-pill-text">
+          <h4>14-Day Exchange</h4>
+          <p>100% of invoice value for eligible items without deduction.</p>
+        </div>
+      </div>
+      <div class="trust-pill-item">
+        <div class="trust-pill-icon">🛡</div>
+        <div class="trust-pill-text">
+          <h4>Lifetime Buyback & Care</h4>
+          <p>Documented valuation & complimentary inspection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collections Section -->
+  <section class="collections-section" id="collections">
+    <div class="section-header">
+      <span class="section-subtitle">Exquisite Royal Craftsmanship</span>
+      <h2 class="section-title">Signature Collections</h2>
+      <div class="gold-divider-ornate">
+        <div class="line"></div>
+        <div class="diamond-icon">❖</div>
+        <div class="line"></div>
+      </div>
+      <p class="section-desc">Each jewellery heirloom reflects the regal architecture and artisanal traditions of
+        Rajasthan, tailored for the contemporary connoisseur.</p>
+    </div>
+
+    <div class="collections-grid">
+      <!-- Collection 1: Polki & Jadau -->
+      <div class="collection-card" onclick="filterByCategory('polki')">
+        <div class="collection-img-wrap">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
+            alt="Royal Polki & Kundan Jadau">
+        </div>
+        <div class="collection-info">
+          <div>
+            <h3 class="collection-title">Polki & Kundan Jadau</h3>
+            <p class="collection-specs">Uncut syndicate diamonds set in 24K gold foil with reverse meenakari enamelling.
+            </p>
+          </div>
+          <span class="collection-link">Explore Collection →</span>
+        </div>
+      </div>
+
+      <!-- Collection 2: 22K Heritage Gold -->
+      <div class="collection-card" onclick="filterByCategory('gold')">
+        <div class="collection-img-wrap">
+          <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1000&auto=format&fit=crop"
+            alt="22K Heritage Gold">
+        </div>
+        <div class="collection-info">
+          <div>
+            <h3 class="collection-title">22K Heritage Gold</h3>
+            <p class="collection-specs">Solid 916 hallmarked temple jewellery, filigree wire necklaces, and royal gokhru
+              kadas.</p>
+          </div>
+          <span class="collection-link">Explore Collection →</span>
+        </div>
+      </div>
+
+      <!-- Collection 3: Fine Diamonds -->
+      <div class="collection-card" onclick="filterByCategory('diamond')">
+        <div class="collection-img-wrap">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop"
+            alt="Certified Fine Diamonds">
+        </div>
+        <div class="collection-info">
+          <div>
+            <h3 class="collection-title">Certified Diamonds</h3>
+            <p class="collection-specs">GIA & IGI certified natural solitaires, tennis bracelets, and diamond collar
+              necklaces.</p>
+          </div>
+          <span class="collection-link">Explore Collection →</span>
+        </div>
+      </div>
+
+      <!-- Collection 4: Bridal Trousseau -->
+      <div class="collection-card" onclick="filterByCategory('bridal')">
+        <div class="collection-img-wrap">
+          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop"
+            alt="Jaipur Bridal Sets">
+        </div>
+        <div class="collection-info">
+          <div>
+            <h3 class="collection-title">Bridal Trousseau</h3>
+            <p class="collection-specs">Grand multi-piece wedding sets with chokers, raani haars, mathapattis and
+              hathphools.</p>
+          </div>
+          <span class="collection-link">Explore Collection →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shoppable Reels: 3D Coverflow Video Carousel -->
+  <section class="reels-section" id="reels">
+    <div class="reels-container">
+      <div class="section-header">
+        <span class="section-subtitle">STYLED BY TRADITION</span>
+        <h2 class="section-title">Jewellery in Motion</h2>
+        <div class="gold-divider-ornate">
+          <div class="line"></div>
+          <div class="diamond-icon">◈</div>
+          <div class="line"></div>
+        </div>
+        <p class="section-desc">Watch how our gold, diamond and polki pieces are worn for every occasion.</p>
+      </div>
+
+      <!-- 3D Coverflow Container -->
+      <div class="reels-coverflow-wrapper">
+        <button class="reel-nav-btn prev" onclick="prevReelSlide()" aria-label="Previous reel">❮</button>
+        <div class="reels-stage" id="reelsStage">
+          <!-- Dynamically populated by renderReelsCoverflow() -->
+        </div>
+        <button class="reel-nav-btn next" onclick="nextReelSlide()" aria-label="Next reel">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heritage Journey & Founders Timeline Section -->
+  <section class="heritage-section" id="heritage">
+    <div class="heritage-container">
+      <div class="section-header heritage-header">
+        <span class="section-subtitle">Our Journey & Foundations</span>
+        <h2 class="section-title">Generations of Trust Since 1990</h2>
+        <div class="gold-divider-ornate">
+          <div class="line"></div>
+          <div class="diamond-icon">❖</div>
+          <div class="line"></div>
+        </div>
+        <p class="section-desc" style="color:#DAD0BE;">From wholesale roots near Bikaner to a revered retail showroom in
+          Jaipur, explore how Shri Jai Hanuman Bamalwa and Veer Bamalwa established our promise of fair value.</p>
+      </div>
+
+      <div class="heritage-timeline">
+        <!-- 1990 -->
+        <div class="timeline-node">
+          <div class="timeline-year-bubble">
+            <span class="year">1990</span>
+            <span class="location">Bikaner</span>
+          </div>
+          <div class="timeline-card">
+            <h4>Wholesale Roots</h4>
+            <div class="timeline-founder">Shri Jai Hanuman Bamalwa</div>
+            <p>Started a jewellery wholesale business in a small town near Bikaner. Built upon integrity, personal
+              relationships, and deep technical knowledge of bullion and gemstones.</p>
+            <div class="timeline-quote">"Integrity is the only metal that never tarnishes."</div>
+          </div>
+        </div>
+
+        <!-- 2001 -->
+        <div class="timeline-node">
+          <div class="timeline-year-bubble">
+            <span class="year">2001</span>
+            <span class="location">Jaipur</span>
+          </div>
+          <div class="timeline-card">
+            <h4>Move to the Pink City</h4>
+            <div class="timeline-founder">Artisanal Mastery</div>
+            <p>The family relocated to Jaipur, immersing in global gemstone cutting, Zambian emerald trading, and royal
+              Jadau-Meenakari master workshops.</p>
+            <div class="timeline-quote">"Jaipur brought us to the heart of royal jewellery craft."</div>
+          </div>
+        </div>
+
+        <!-- 2014 -->
+        <div class="timeline-node">
+          <div class="timeline-year-bubble">
+            <span class="year">2014</span>
+            <span class="location">Showroom</span>
+          </div>
+          <div class="timeline-card">
+            <h4>Retail Flagship Opens</h4>
+            <div class="timeline-founder">Direct to Customers</div>
+            <p>Opened our signature retail showroom in Jaipur to bring fine jewellery directly to families with
+              transparent pricing and no inflated middleman markups.</p>
+            <div class="timeline-quote">"Pricing should be fair, and clients should feel confident."</div>
+          </div>
+        </div>
+
+        <!-- Today -->
+        <div class="timeline-node">
+          <div class="timeline-year-bubble">
+            <span class="year">Today</span>
+            <span class="location">Next Era</span>
+          </div>
+          <div class="timeline-card">
+            <h4>Veer Bamalwa's Vision</h4>
+            <div class="timeline-founder">Modern Brand Legacy</div>
+            <p>Carrying the family legacy forward by combining decades-old values with contemporary designs, certified
+              transparency, and digital customer assurance.</p>
+            <div class="timeline-quote">"Preserving traditional trust while meeting modern expectations."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalogue & Shop (24 Seed Items) -->
+  <section class="shop-section" id="shop">
+    <div class="shop-container">
+      <div class="section-header">
+        <span class="section-subtitle">Transparent Fine Jewellery</span>
+        <h2 class="section-title">The Complete Collection</h2>
+        <div class="gold-divider-ornate">
+          <div class="line"></div>
+          <div class="diamond-icon">❖</div>
+          <div class="line"></div>
+        </div>
+        <p class="section-desc">Explore 24 realistically seeded pieces in 22K Gold, Polki, and certified Diamonds. Click
+          any piece to inspect our transparent price breakdown formula.</p>
+      </div>
+
+      <!-- Controls: Filter Chips, Search & Sort -->
+      <div class="catalog-controls">
+        <div class="filter-chips">
+          <button class="filter-chip active" onclick="setCategoryFilter('all', this)">All (24)</button>
+          <button class="filter-chip" onclick="setCategoryFilter('polki', this)">Polki & Jadau (6)</button>
+          <button class="filter-chip" onclick="setCategoryFilter('gold', this)">22K Heritage Gold (6)</button>
+          <button class="filter-chip" onclick="setCategoryFilter('diamond', this)">Fine Diamonds (6)</button>
+          <button class="filter-chip" onclick="setCategoryFilter('bridal', this)">Bridal Trousseau (6)</button>
+        </div>
+
+        <div class="catalog-search-sort">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="catalogSearch" class="search-input" placeholder="Search necklace, ring, kada..."
+              oninput="handleSearch(this.value)">
+          </div>
+          <select class="sort-select" id="catalogSort" onchange="handleSort(this.value)">
+            <option value="featured">Featured Curations</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="weight-desc">Gold Weight: Heaviest First</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Assurance & Interactive "Know Your Jewellery" Guide -->
+  <section class="quality-section" id="quality">
+    <div class="section-header">
+      <span class="section-subtitle">Verified Authenticity</span>
+      <h2 class="section-title">Quality Assurance Standards</h2>
+      <div class="gold-divider-ornate">
+        <div class="line"></div>
+        <div class="diamond-icon">❖</div>
+        <div class="line"></div>
+      </div>
+      <p class="section-desc">Every piece from Jai Sri Ram Jewellers undergoes rigorous testing and carries
+        government-recognized certifications.</p>
+    </div>
+
+    <div class="qa-grid">
+      <div class="qa-card">
+        <div class="qa-icon-wrap">🔍</div>
+        <h4>BIS Hallmark & HUID</h4>
+        <p>100% of gold jewellery is engraved with the official Bureau of Indian Standards hallmark and a unique 6-digit
+          alphanumeric HUID code for foolproof traceability.</p>
+      </div>
+
+      <div class="qa-card">
+        <div class="qa-icon-wrap">💎</div>
+        <h4>Natural Diamonds</h4>
+        <p>We work exclusively with certified natural diamonds graded by GIA (Gemological Institute of America) and IGI
+          for Colour (E-G), Clarity (VVS-VS), and Cut.</p>
+      </div>
+
+      <div class="qa-card">
+        <div class="qa-icon-wrap">👑</div>
+        <h4>Authentic Polki Jadau</h4>
+        <p>Our polki is authentic natural uncut diamonds set in 24K pure gold foil (Jadau technique). Zero glass,
+          synthetic stones, or undisclosed synthetic composites.</p>
+      </div>
+
+      <div class="qa-card">
+        <div class="qa-icon-wrap">📜</div>
+        <h4>Exact Weight Transparency</h4>
+        <p>Invoices clearly document Gross Weight, Net Gold Weight (excluding stone weights), Stone Carats, and daily
+          gold rate. You never pay gold price for stone weight.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive "Know Your Jewellery" Mini Guide -->
+  <section class="know-guide-section">
+    <div class="section-header">
+      <span class="section-subtitle" style="color:var(--gold-light);">Empowering the Jewellery Buyer</span>
+      <h2 class="section-title" style="color:var(--ivory);">Know Your Jewellery Guide</h2>
+      <div class="gold-divider-ornate">
+        <div class="line"></div>
+        <div class="diamond-icon">❖</div>
+        <div class="line"></div>
+      </div>
+      <p class="section-desc" style="color:#D6CEBE;">Understanding what makes fine jewellery authentic and valuable
+        before making your purchase.</p>
+    </div>
+
+    <div class="guide-tabs">
+      <button class="guide-tab-btn active" onclick="switchGuide('huid', this)">Understanding BIS HUID</button>
+      <button class="guide-tab-btn" onclick="switchGuide('polki', this)">What is Authentic Polki?</button>
+      <button class="guide-tab-btn" onclick="switchGuide('pricing', this)">Transparent Pricing Formula</button>
+      <button class="guide-tab-btn" onclick="switchGuide('4cs', this)">Diamond 4Cs Guide</button>
+    </div>
+
+    <div class="guide-panel" id="guideContent">
+      <h3 style="font-size:24px; color:var(--gold-light); margin-bottom:12px;">The 6-Digit BIS Hallmark Unique
+        Identification (HUID)</h3>
+      <p style="font-size:14px; line-height:1.8; color:#EAE1D3; margin-bottom:16px;">
+        In India, mandatory hallmarking ensures you get the exact purity you pay for. A genuine hallmarked piece carries
+        3 laser marks:<br>
+        1. <strong>BIS Triangular Logo</strong>: The national standard mark.<br>
+        2. <strong>Purity Mark</strong>: 22K916 (91.6% pure gold) or 18K750 (75.0% pure gold).<br>
+        3. <strong>6-Digit Alphanumeric HUID</strong>: A unique tracking code registered on the Bureau of Indian
+        Standards BIS Care mobile app.
+      </p>
+      <div
+        style="background:rgba(196,164,108,0.15); border:1px solid var(--gold); padding:16px; border-radius:4px; font-size:13px; color:var(--gold-light);">
+        💡 <strong>At Jai Sri Ram Jewellers:</strong> Every invoice lists your jewellery's specific HUID code so you can
+        independently verify it on the BIS government portal anytime.
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Policy Hub (All 9 Policies with Brief's Strict Copy) -->
+  <section class="policy-section" id="policies">
+    <div class="policy-hub-container">
+      <div class="section-header">
+        <span class="section-subtitle">Governance & Integrity</span>
+        <h2 class="section-title">Customer Policies</h2>
+        <div class="gold-divider-ornate">
+          <div class="line"></div>
+          <div class="diamond-icon">❖</div>
+          <div class="line"></div>
+        </div>
+        <p class="section-desc">Transparent commitments designed for mutual confidence. Proposed draft terms pending
+          management approval and legal review under applicable Indian regulations.</p>
+      </div>
+
+      <!-- Policy Tabs Navigation -->
+      <div class="policy-tabs-nav" id="policyTabsNav">
+        <button class="policy-tab-item active" onclick="openPolicyTab('14-day-exchange', this)">14-Day Exchange</button>
+        <button class="policy-tab-item" onclick="openPolicyTab('lifetime-buyback', this)">Lifetime Buyback</button>
+        <button class="policy-tab-item" onclick="openPolicyTab('lifetime-maintenance', this)">Lifetime
+          Maintenance</button>
+        <button class="policy-tab-item" onclick="openPolicyTab('shipping-delivery', this)">Shipping & Delivery</button>
+        <button class="policy-tab-item" onclick="openPolicyTab('cancellation', this)">Cancellation</button>
+        <button class="policy-tab-item" onclick="openPolicyTab('damaged-incorrect', this)">Damaged / Incorrect</button>
+        <button class="policy-tab-item" onclick="openPolicyTab('quality-authenticity', this)">Quality Assurance</button>
+        <button class="policy-tab-item" onclick="openPolicyTab('privacy-terms', this)">Privacy & Terms</button>
+        <button class="policy-tab-item" onclick="openPolicyTab('grievance-redressal', this)">Grievance
+          Redressal</button>
+      </div>
+
+      <!-- Active Policy Content Box -->
+      <div class="policy-content-box" id="policyContentBox">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Genuine Testimonials Section (Clearly Marked Placeholders) -->
+  <section class="testimonials-section">
+    <div class="testimonials-container">
+      <div class="placeholder-alert">
+        ℹ Sample Reviews Placeholder · To be replaced exclusively with genuine Google & Showroom reviews upon client
+        launch
+      </div>
+      <div class="section-header" style="margin-bottom:30px;">
+        <span class="section-subtitle">Generations of Confidence</span>
+        <h2 class="section-title">Voices of Our Patron Families</h2>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="testimonial-quote">
+          "What set Jai Sri Ram Jewellers apart for our daughter’s bridal trousseau was their unmatched pricing
+          transparency. Seeing the exact net gold weight, daily rate, and certified polki appraisal in black and white
+          gave our family total peace of mind."
+        </div>
+        <div class="testimonial-author">Smt. Sunita & Rajesh Singhania</div>
+        <div class="testimonial-meta">Patrons since 2015 · Jaipur & New Delhi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jaipur Showroom & Appointment Booking Section -->
+  <section class="showroom-section" id="showroom">
+    <div class="showroom-grid">
+      <div class="showroom-info">
+        <span class="section-subtitle" style="color:var(--gold-light);">Personal Consultation</span>
+        <h3>Visit Our Jaipur Showroom</h3>
+        <p style="color:#D8CFBF; line-height:1.7; font-size:15px;">
+          Experience fine jewellery in our tranquil, neo-classical salon. Whether you wish to explore bespoke bridal
+          sets, verify gold purity, or discuss a customized commission, our family is at your service.
+        </p>
+
+        <div class="showroom-address-card">
+          <div class="showroom-row">
+            <span>📍</span>
+            <div>
+              <strong>Jai Sri Ram Jewellers Showroom</strong><br>
+              Near Johari Bazar & M.I. Road Crossing, Jaipur, Rajasthan 302001, India
+            </div>
+          </div>
+          <div class="showroom-row">
+            <span>🕒</span>
+            <div><strong>Hours:</strong> Monday – Sunday: 11:00 AM – 8:30 PM</div>
+          </div>
+          <div class="showroom-row">
+            <span>📞</span>
+            <div><strong>Concierge Phone:</strong> +91 141 256 9090 / +91 98290 19900</div>
+          </div>
+          <div class="showroom-row">
+            <span>💬</span>
+            <div><strong>WhatsApp Concierge:</strong> +91 98290 19900 (Instant assistance)</div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/919829019900?text=Hello%20Jai%20Sri%20Ram%20Jewellers,%20I%20would%20like%20to%20enquire%20about%20a%20jewellery%20consultation."
+          target="_blank" class="btn-outline-gold">
+          💬 Chat on WhatsApp with Concierge
+        </a>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="booking-card">
+        <h4>Book an Appointment</h4>
+        <p style="font-size:13px; color:var(--charcoal-muted); margin-bottom:20px;">Reserve private lounge time at our
+          Jaipur showroom or request a high-definition video consultation.</p>
+
+        <form id="appointmentForm" onsubmit="handleAppointmentSubmit(event)">
+          <div class="form-group">
+            <label class="form-label">Full Name *</label>
+            <input type="text" class="form-input" id="bName" required placeholder="Enter your full name">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" class="form-input" id="bPhone" required placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" id="bEmail" placeholder="name@example.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Consultation Type *</label>
+              <select class="form-select" id="bType" required>
+                <option value="showroom">Jaipur Showroom Visit</option>
+                <option value="video">Virtual Video Consultation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Jewellery Interest *</label>
+              <select class="form-select" id="bInterest" required>
+                <option value="bridal">Bridal Trousseau & High Jewellery</option>
+                <option value="polki">Kundan Polki & Jadau</option>
+                <option value="gold">22K Heritage Gold</option>
+                <option value="diamond">Solitaire Diamonds</option>
+                <option value="custom">Custom Commission</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Preferred Date *</label>
+              <input type="date" class="form-input" id="bDate" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Time Slot *</label>
+              <select class="form-select" id="bTime" required>
+                <option value="11am">11:00 AM – 01:00 PM</option>
+                <option value="2pm">02:00 PM – 04:00 PM</option>
+                <option value="4pm">04:00 PM – 06:00 PM</option>
+                <option value="6pm">06:00 PM – 08:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-gold" style="width:100%; justify-content:center; margin-top:8px;">Confirm
+            Appointment Reservation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Bag / Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCartDrawer()"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Shopping Bag</h3>
+      <button onclick="closeCartDrawer()" style="color:var(--gold-light); font-size:20px;">✕</button>
+    </div>
+    <div
+      style="background:#FFFDF9; border-bottom:1px solid #ECE3D4; padding:8px 24px; font-size:11px; color:#047857; display:flex; align-items:center; gap:6px;">
+      <span>🔒 100% Insured Delivery Across India</span>
+    </div>
+    <div class="cart-items-wrap" id="cartItemsList">
+      <!-- Items dynamically populated -->
+    </div>
+    <div class="cart-footer">
+      <div
+        style="font-size:12px; color:var(--charcoal-muted); margin-bottom:8px; display:flex; justify-content:space-between;">
+        <span>Includes 3% GST & Insured Shipping</span>
+        <span style="color:#047857; font-weight:600;">FREE</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Estimated Total:</span>
+        <span id="cartTotalPrice">₹0</span>
+      </div>
+      <button class="btn-maroon" style="width:100%; justify-content:center;" onclick="proceedToCheckout()">
+        Proceed to Secure Checkout →
+      </button>
+    </div>
+  </aside>
+
+  <!-- Interactive Product Detail & Transparent Price Breakdown Modal -->
+  <div class="modal-overlay" id="productModal" onclick="handleModalOverlayClick(event)">
+    <div class="modal-content" id="productModalContent">
+      <button class="modal-close-btn" onclick="closeProductModal()">✕</button>
+      <div class="pdm-grid" id="pdmGridContent">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div class="modal-overlay" id="wishlistModal" onclick="if(event.target===this) closeWishlistModal()">
+    <div class="modal-content" style="max-width:700px; padding:36px;">
+      <button class="modal-close-btn" onclick="closeWishlistModal()">✕</button>
+      <h3 style="font-size:28px; color:var(--maroon); margin-bottom:16px;">Saved Heirloom Pieces</h3>
+      <div id="wishlistItemsList">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- High-Fidelity Razorpay Checkout Simulation Modal -->
+  <div class="modal-overlay" id="checkoutModal" onclick="if(event.target===this) closeCheckoutModal()">
+    <div class="razorpay-modal-box">
+      <div class="rp-header">
+        <div class="rp-brand">
+          <span style="font-size:18px;">💎</span>
+          <div>
+            <div style="font-weight:700; font-size:14px;">Jai Sri Ram Jewellers</div>
+            <div style="font-size:11px; opacity:0.8;">Jaipur Showroom Secured Gateway</div>
+          </div>
+        </div>
+        <span class="rp-badge-test">Test Mode</span>
+      </div>
+      <div class="rp-body">
+        <div style="border-bottom:1px solid #E5E7EB; padding-bottom:14px; margin-bottom:16px;">
+          <div style="font-size:12px; color:#6B7280; text-transform:uppercase;">Amount Payable</div>
+          <div style="font-size:28px; font-weight:700; color:#111827;" id="rpPayableAmount">₹0</div>
+          <div style="font-size:11px; color:#047857; margin-top:2px;">Includes 3% GST · Insured Trackable Transit</div>
+        </div>
+
+        <div style="font-size:12px; font-weight:600; text-transform:uppercase; color:#4B5563; margin-bottom:10px;">
+          Select Payment Method</div>
+
+        <div class="rp-pay-method selected" onclick="selectPayMethod(this)">
+          <span style="font-size:18px;">💳</span>
+          <div>
+            <div style="font-weight:600; font-size:13px;">Credit / Debit Card</div>
+            <div style="font-size:11px; color:#6B7280;">Visa, Mastercard, RuPay, Amex</div>
+          </div>
+        </div>
+
+        <div class="rp-pay-method" onclick="selectPayMethod(this)">
+          <span style="font-size:18px;">📱</span>
+          <div>
+            <div style="font-weight:600; font-size:13px;">UPI / QR Code</div>
+            <div style="font-size:11px; color:#6B7280;">Google Pay, PhonePe, Paytm, BHIM</div>
+          </div>
+        </div>
+
+        <div class="rp-pay-method" onclick="selectPayMethod(this)">
+          <span style="font-size:18px;">🏛</span>
+          <div>
+            <div style="font-weight:600; font-size:13px;">Net Banking</div>
+            <div style="font-size:11px; color:#6B7280;">HDFC, ICICI, SBI, Axis & 50+ Banks</div>
+          </div>
+        </div>
+
+        <button class="btn-maroon" style="width:100%; justify-content:center; margin-top:16px;"
+          onclick="simulatePaymentSuccess()">
+          Simulate Successful Test Payment
+        </button>
+        <div style="text-align:center; font-size:10px; color:#9CA3AF; margin-top:10px;">
+          Simulated Sandbox · No real charges will be levied
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div class="modal-overlay" id="orderConfirmModal">
+    <div class="modal-content" style="max-width:650px; padding:40px; text-align:center;">
+      <div style="margin-bottom:18px;">
+        <img src="logo.png" alt="Jai Sri Ram Jewellers" style="height:52px; width:auto; margin:0 auto; display:block; filter:drop-shadow(0 2px 8px rgba(101,21,47,0.18));">
+      </div>
+      <div
+        style="width:56px; height:56px; border-radius:50%; background:#ECFDF5; border:2px solid #10B981; color:#059669; font-size:26px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+        ✓
+      </div>
+      <h3 style="font-size:32px; color:var(--maroon); margin-bottom:8px;">Thank You for Your Trust</h3>
+      <div style="font-size:14px; color:var(--magenta); font-weight:600; margin-bottom:18px;" id="confirmOrderId">
+        Order Confirmed: #JSR-2026-8941
+      </div>
+      <p style="font-size:14px; color:var(--charcoal-muted); line-height:1.7; margin-bottom:24px;">
+        Your heirloom jewellery order has been received by our Jaipur flagship atelier. A formal invoice with BIS
+        Hallmark HUID verification and insured courier tracking details has been generated.
+      </p>
+
+      <div
+        style="background:#FAF7F2; border:1px solid var(--gold); border-radius:6px; padding:18px; text-align:left; font-size:13px; margin-bottom:24px;">
+        <div style="font-weight:700; color:var(--maroon); margin-bottom:8px;">WhatsApp Confirmation Template:</div>
+        <div
+          style="color:#4B5563; font-family:monospace; font-size:12px; background:#FFF; padding:12px; border-radius:4px; border:1px solid #E5E7EB;">
+          "Namaste from Jai Sri Ram Jewellers, Jaipur. Your order has been securely received with 100% transit
+          insurance. Your dedicated concierge will contact you before insured dispatch."
+        </div>
+      </div>
+
+      <button class="btn-gold" onclick="closeOrderConfirmModal()">Return to Collections</button>
+    </div>
+  </div>
+
+  <!-- Admin Live Rate Editor Panel (Floating Button & Modal) -->
+  <button class="admin-float-btn" onclick="openAdminModal()">
+    ⚙ Live Rates & Admin
+  </button>
+
+  <div class="modal-overlay" id="adminModal" onclick="if(event.target===this) closeAdminModal()">
+    <div class="admin-modal-box">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 style="font-size:22px; color:var(--maroon);">Bullion Benchmark Control</h3>
+        <button onclick="closeAdminModal()" style="font-size:18px;">✕</button>
+      </div>
+      <p style="font-size:12px; color:var(--charcoal-muted); margin-bottom:16px;">
+        Adjust benchmark gold rates to simulate live price updates across all 24 catalog products in real-time.
+      </p>
+
+      <div class="form-group">
+        <label class="form-label">24K Gold Rate (₹ / 10g)</label>
+        <input type="number" class="form-input" id="admin24k" value="78450">
+      </div>
+      <div class="form-group">
+        <label class="form-label">22K Hallmarked Rate (₹ / 10g)</label>
+        <input type="number" class="form-input" id="admin22k" value="71920">
+      </div>
+      <div class="form-group">
+        <label class="form-label">18K Diamond Setting Rate (₹ / 10g)</label>
+        <input type="number" class="form-input" id="admin18k" value="58840">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Draft Policy Top Banner</label>
+        <select class="form-select" id="adminDraftBannerToggle">
+          <option value="show">Show Draft Banner (Pending Approval)</option>
+          <option value="hide">Hide Banner (Approved Mode)</option>
+        </select>
+      </div>
+
+      <button class="btn-maroon" style="width:100%; justify-content:center; margin-top:10px;"
+        onclick="saveAdminRates()">
+        Apply & Recalculate Catalog Prices
+      </button>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" style="display:inline-block; margin-bottom:14px;" title="Jai Sri Ram Jewellers · Jaipur Since 1990">
+          <img src="logo.png" alt="Jai Sri Ram Jewellers Jaipur" style="height:56px; width:auto; filter:drop-shadow(0 2px 14px rgba(196,164,108,0.38));">
+        </a>
+        <p>
+          Fine Jewellery. Fair Value. Generations of Trust.<br>
+          Carrying forward the heritage established in 1990 near Bikaner, crafting timeless royal Kundan Polki, 22K
+          gold, and natural certified diamonds in Jaipur, Rajasthan.
+        </p>
+        <div style="margin-top:20px; font-size:12px; color:var(--gold-light);">
+          📍 Johari Bazar / M.I. Road Crossing, Jaipur 302001<br>
+          📞 +91 141 256 9090 · 💬 WhatsApp: +91 98290 19900<br>
+          ✉ concierge@jaisriramjewellers.com
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Collections</h5>
+        <ul class="footer-links">
+          <li><a href="#shop" onclick="setCategoryFilter('polki')">Royal Polki & Jadau</a></li>
+          <li><a href="#shop" onclick="setCategoryFilter('gold')">22K Heritage Gold</a></li>
+          <li><a href="#shop" onclick="setCategoryFilter('diamond')">Certified Diamonds</a></li>
+          <li><a href="#shop" onclick="setCategoryFilter('bridal')">Bridal Trousseau</a></li>
+          <li><a href="#shop" onclick="setCategoryFilter('all')">Full 24-Piece Vault</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Customer Policies</h5>
+        <ul class="footer-links">
+          <li><a href="#policies" onclick="openPolicyTab('14-day-exchange')">14-Day Exchange</a></li>
+          <li><a href="#policies" onclick="openPolicyTab('lifetime-buyback')">Lifetime Buyback</a></li>
+          <li><a href="#policies" onclick="openPolicyTab('lifetime-maintenance')">Lifetime Maintenance</a></li>
+          <li><a href="#policies" onclick="openPolicyTab('shipping-delivery')">Insured Shipping</a></li>
+          <li><a href="#policies" onclick="openPolicyTab('cancellation')">Order Cancellation</a></li>
+          <li><a href="#policies" onclick="openPolicyTab('grievance-redressal')">Grievance Redressal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Showroom & Assurance</h5>
+        <ul class="footer-links">
+          <li><a href="#heritage">The Bamalwa Legacy Since 1990</a></li>
+          <li><a href="#quality">BIS Hallmark & HUID Guide</a></li>
+          <li><a href="#showroom">Schedule Showroom Visit</a></li>
+          <li><a href="#showroom">Virtual Video Consultation</a></li>
+          <li><a href="#policies" onclick="openPolicyTab('privacy-terms')">Privacy & Payment Security</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 Jai Sri Ram Jewellers. All Rights Reserved. Jaipur, Rajasthan, India.
+      </div>
+      <div>
+        Draft Customer Policies subject to final management confirmation.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Bag Cart Drawer -->
+  <div id="cartOverlay" class="cart-drawer-overlay" onclick="closeCartDrawer()"></div>
+  <div id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span>🛍</span>
+        <h3>Your Shopping Bag</h3>
+      </div>
+      <button onclick="closeCartDrawer()" style="color:#FFF; font-size:22px; cursor:pointer;">✕</button>
+    </div>
+    <div style="background:#2B0814; color:#E3D2AE; font-size:11px; padding:8px 16px; text-align:center; border-bottom:1px solid rgba(196,164,108,0.3);">
+      🛡️ 100% Insured Delivery · Sealed Tamper-Evident Packaging
+    </div>
+    <div class="cart-items-wrap" id="cartItemsList">
+      <!-- Injected by renderCartDrawer() -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Grand Total (Incl. GST):</span>
+        <span id="cartTotalPrice">₹0</span>
+      </div>
+      <button class="btn-maroon" style="width:100%; justify-content:center; padding:14px; font-weight:700; letter-spacing:0.1em;" onclick="proceedToCheckout()">
+        Proceed to Secure Checkout →
+      </button>
+      <div style="text-align:center; margin-top:10px; font-size:11px; color:#6B7280;">
+        ✓ 14-Day 100% Value Exchange · BIS 916 Hallmark Guaranteed
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Detail & Formula Breakdown Lightbox -->
+  <div id="productModal" class="modal-overlay" onclick="handleModalOverlayClick(event)">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeProductModal()">✕</button>
+      <div id="pdmGridContent" class="pdm-grid">
+        <!-- Dynamically injected by openProductDetail() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Razorpay / Multi-Step Checkout Modal -->
+  <div id="checkoutModal" class="modal-overlay">
+    <div class="modal-box razorpay-modal-box" style="max-width:540px; padding:0;">
+      <div class="rp-header">
+        <div class="rp-brand">
+          <svg style="width:24px; height:24px;" viewBox="0 0 60 60" fill="none">
+            <path d="M5,50 L5,22 Q5,6 30,2 Q55,6 55,22 L55,50 Z" stroke="#C4A46C" stroke-width="2"/>
+            <text x="30" y="32" font-family="'Cormorant Garamond', serif" font-size="12" fill="#C4A46C" text-anchor="middle" font-weight="700">JSR</text>
+          </svg>
+          <div>
+            <div style="font-size:14px; font-weight:700; color:#FFF;">Jai Sri Ram Jewellers</div>
+            <div style="font-size:11px; color:#93C5FD;">Insured Checkout Portal</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span class="rp-badge-test">256-Bit SSL</span>
+          <button onclick="closeCheckoutModal()" style="color:#FFF; font-size:18px;">✕</button>
+        </div>
+      </div>
+      <div class="rp-body">
+        <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:6px; padding:12px 16px; margin-bottom:18px; display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <span style="font-size:11px; color:#6B7280; text-transform:uppercase;">Payable Amount:</span>
+            <div style="font-size:22px; font-weight:800; color:var(--maroon);" id="rpPayableAmount">₹0</div>
+          </div>
+          <span style="font-size:11px; color:#059669; font-weight:600;">✓ Free Insured Delivery</span>
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; color:var(--maroon); margin-bottom:4px;">Delivery PIN & Name</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <input type="text" id="chkName" placeholder="Full Legal Name" value="Maharani Gayatri Devi" style="padding:8px 10px; border:1px solid #D1D5DB; border-radius:3px; font-size:12px;">
+            <input type="text" id="chkPin" placeholder="6-digit PIN code" value="302003" style="padding:8px 10px; border:1px solid #D1D5DB; border-radius:3px; font-size:12px; font-family:monospace;">
+          </div>
+        </div>
+
+        <div style="font-size:12px; font-weight:700; color:#374151; margin-bottom:10px; text-transform:uppercase;">Select Payment Mode</div>
+        <div class="rp-pay-method selected" onclick="selectPayMethod(this)">
+          <span style="font-size:18px;">📱</span>
+          <div style="flex:1;">
+            <div style="font-weight:600; font-size:13px;">Instant UPI / QR (Google Pay, PhonePe, Paytm)</div>
+            <div style="font-size:11px; color:#6B7280;">Zero surcharge · Instant automated receipt</div>
+          </div>
+        </div>
+        <div class="rp-pay-method" onclick="selectPayMethod(this)">
+          <span style="font-size:18px;">💳</span>
+          <div style="flex:1;">
+            <div style="font-weight:600; font-size:13px;">Credit & Debit Cards (Visa, MasterCard, RuPay)</div>
+            <div style="font-size:11px; color:#6B7280;">3D Secure OTP verification · EMI options</div>
+          </div>
+        </div>
+        <div class="rp-pay-method" onclick="selectPayMethod(this)">
+          <span style="font-size:18px;">🏛️</span>
+          <div style="flex:1;">
+            <div style="font-weight:600; font-size:13px;">VIP Showroom Payment & Inspection (Jaipur)</div>
+            <div style="font-size:11px; color:#6B7280;">Reserve online · Inspect hallmarking in salon</div>
+          </div>
+        </div>
+
+        <button class="btn-maroon" style="width:100%; justify-content:center; padding:14px; margin-top:14px; font-weight:700;" onclick="simulatePaymentSuccess()">
+          Complete Insured Order →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Success Modal -->
+  <div id="orderConfirmModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:500px; text-align:center;">
+      <button class="modal-close-btn" onclick="closeOrderConfirmModal()">✕</button>
+      <div style="width:64px; height:64px; border-radius:50%; background:rgba(196,164,108,0.2); border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:28px; color:var(--maroon);">
+        ⚜
+      </div>
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--maroon); margin-bottom:8px;">Order Confirmed with Honor</h3>
+      <p style="font-size:13px; color:#6B7280; margin-bottom:16px;">
+        Thank you for trusting Jai Sri Ram Jewellers. Your heirloom piece is being prepared with BIS 916 inspection and tamper-proof security seals in Jaipur.
+      </p>
+      <div style="background:var(--ivory); border:1px solid var(--gold); padding:12px; border-radius:4px; font-weight:700; color:var(--maroon); margin-bottom:20px; font-family:monospace;" id="confirmOrderId">
+        Order Confirmed: #JSR-928410
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button class="btn-maroon" style="flex:1; justify-content:center;" onclick="closeOrderConfirmModal()">Continue Browsing Vault</button>
+        <a href="https://wa.me/919829019900?text=Hello%20Jai%20Sri%20Ram%20Jewellers,%20I%20have%20placed%20an%20order%20and%20request%20live%20dispatch%20tracking." target="_blank" class="btn-outline-gold" style="padding:10px 14px; font-size:12px;">💬 Track on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Saved Heirlooms Wishlist Lightbox -->
+  <div id="wishlistModal" class="modal-overlay">
+    <div class="modal-box" style="max-width:600px;">
+      <button class="modal-close-btn" onclick="closeWishlistModal()">✕</button>
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:26px; color:var(--maroon); margin-bottom:6px;">Your Saved Heirlooms</h3>
+      <p style="font-size:12px; color:#6B7280; margin-bottom:20px;">Pieces you have bookmarked for weddings, festivals, and royal celebrations.</p>
+      <div id="wishlistItemsList" style="max-height:360px; overflow-y:auto; padding-right:6px;">
+        <!-- Injected by openWishlistModal() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Live Rate Adjustment Button -->
+  <button class="admin-float-btn" onclick="openRateAdjusterModal()" title="Adjust Live Bullion Rates">
+    <span>⚙️ Live Rates: 22K @ <span id="floatRate22k">₹7,192</span>/g</span>
+  </button>
+
+  <!-- Live Gold & Diamond Rate Adjuster Modal -->
+  <div id="rateAdjusterModal" class="modal-overlay">
+    <div class="modal-box admin-modal-box">
+      <button class="modal-close-btn" onclick="closeRateAdjusterModal()">✕</button>
+      <div style="text-align:center; margin-bottom:20px;">
+        <span style="font-size:11px; text-transform:uppercase; letter-spacing:0.2em; color:var(--gold-dark); font-weight:700;">Bullion Market Simulation</span>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:26px; color:var(--maroon); margin:4px 0;">Live Gold & Diamond Rate Adjuster</h3>
+        <p style="font-size:12px; color:#6B7280;">Adjust benchmark rates up or down. All 24 catalogue prices instantly recalculate using pure gold gram weight.</p>
+      </div>
+
+      <div style="background:var(--ivory); border:1px solid var(--gold); border-radius:6px; padding:16px; margin-bottom:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <div>
+            <div style="font-weight:700; color:var(--maroon); font-size:14px;">22K Gold (916 BIS Hallmark)</div>
+            <div style="font-size:11px; color:#6B7280;">Used in Polki Jadau & Heritage Gold</div>
+          </div>
+          <div style="font-size:18px; font-weight:700; color:var(--maroon);" id="adjRate22kLabel">₹7,192/g</div>
+        </div>
+        <div style="display:flex; gap:6px;">
+          <button class="btn-outline-gold" style="flex:1; padding:6px 2px; font-size:11px;" onclick="adjustRate('gold22k', -100)">- ₹100</button>
+          <button class="btn-outline-gold" style="flex:1; padding:6px 2px; font-size:11px;" onclick="adjustRate('gold22k', -50)">- ₹50</button>
+          <button class="btn-outline-gold" style="flex:1; padding:6px 2px; font-size:11px;" onclick="adjustRate('gold22k', +50)">+ ₹50</button>
+          <button class="btn-outline-gold" style="flex:1; padding:6px 2px; font-size:11px;" onclick="adjustRate('gold22k', +100)">+ ₹100</button>
+        </div>
+      </div>
+
+      <div style="background:var(--ivory); border:1px solid var(--gold); border-radius:6px; padding:16px; margin-bottom:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <div>
+            <div style="font-weight:700; color:var(--maroon); font-size:14px;">18K Gold (750 Purity)</div>
+            <div style="font-size:11px; color:#6B7280;">Solitaires & Natural Diamond Collections</div>
+          </div>
+          <div style="font-size:18px; font-weight:700; color:var(--maroon);" id="adjRate18kLabel">₹5,884/g</div>
+        </div>
+        <div style="display:flex; gap:6px;">
+          <button class="btn-outline-gold" style="flex:1; padding:6px 2px; font-size:11px;" onclick="adjustRate('gold18k', -100)">- ₹100</button>
+          <button class="btn-outline-gold" style="flex:1; padding:6px 2px; font-size:11px;" onclick="adjustRate('gold18k', -50)">- ₹50</button>
+          <button class="btn-outline-gold" style="flex:1; padding:6px 2px; font-size:11px;" onclick="adjustRate('gold18k', +50)">+ ₹50</button>
+          <button class="btn-outline-gold" style="flex:1; padding:6px 2px; font-size:11px;" onclick="adjustRate('gold18k', +100)">+ ₹100</button>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:8px;">
+        <button class="btn-outline-gold" style="flex:1; padding:10px; font-size:12px;" onclick="resetRatesBenchmark()">↺ Reset Benchmark</button>
+        <button class="btn-maroon" style="flex:1; justify-content:center; padding:10px; font-size:12px;" onclick="closeRateAdjusterModal()">Apply to Catalog</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Complete Core Logic & Dynamic Engine -->
+  <script>
+    /* =====================================================================
+       GLOBAL STATE & LIVE BENCHMARK RATES
+       ===================================================================== */
+    let currentRates = {
+      gold24k: 7845,  // per gram
+      gold22k: 7192,  // per gram
+      gold18k: 5884   // per gram
+    };
+
+    let cart = [];
+    let wishlist = [];
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let sortMode = 'featured';
+    let activeProduct = null;
+
+    /* Embedded 24 Realistic Fine Jewellery Pieces */
+    const productsData = [
+      {
+        id: "JSR-POL-001",
+        name: "Mehrangarh Royal Polki & Emerald Choker",
+        slug: "mehrangarh-royal-polki-emerald-choker",
+        category: "polki",
+        subCategory: "necklaces",
+        tag: "Bestseller",
+        description: "An opulent neo-classical choker inspired by royal Rajasthani palace ceilings. Hand-cut syndicate polki diamonds set in 24K gold foil (Jadau technique) with natural Zambian emerald drops and South Sea seed pearl clusters.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 84.50,
+        netGoldWeight: 62.10,
+        stoneDetails: "18.20 ct Syndicate Polki · 42.50 ct Emerald Drops · Pearls",
+        stoneValue: 185000,
+        makingChargePercent: 14,
+        hallmark: "BIS 916 with HUID Verification",
+        certification: "SGL / IGI Polki Authenticity Certified",
+        images: [
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-POL-002",
+        name: "Padmavati Royal Polki Raani Haar",
+        slug: "padmavati-royal-polki-raani-haar",
+        category: "polki",
+        subCategory: "necklaces",
+        tag: "Heritage Masterpiece",
+        description: "Grand multi-tier royal long necklace adorned with flower-cut open polki diamonds, ruby cabochons, and hand-strung Japanese cultured pearls. Reverse side features exquisite Jaipur gulabi meenakari enamel work.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 118.20,
+        netGoldWeight: 88.40,
+        stoneDetails: "28.50 ct Uncut Diamonds · 16.80 ct Burmese Rubies · Pearls",
+        stoneValue: 245000,
+        makingChargePercent: 15,
+        hallmark: "BIS 916 with HUID",
+        certification: "IGI Heritage Jewellery Certificate",
+        images: [
+          "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: false
+      },
+      {
+        id: "JSR-POL-003",
+        name: "Chandbali Jadau Polki Earrings",
+        slug: "chandbali-jadau-polki-earrings",
+        category: "polki",
+        subCategory: "earrings",
+        tag: "Signature",
+        description: "Classic crescent moon earrings with open-claw polki diamonds, dangling pearl bunches, and green meenakari edging. Lightweight internal hollow gold structure for supreme wearing comfort.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 28.60,
+        netGoldWeight: 21.40,
+        stoneDetails: "6.80 ct Uncut Polki Diamonds · 12.00 ct Natural Pearls",
+        stoneValue: 68000,
+        makingChargePercent: 13,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "SGL Verified Purity",
+        images: [
+          "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-POL-004",
+        name: "Rajputana Polki Kada (Pair)",
+        slug: "rajputana-polki-kada-pair",
+        category: "polki",
+        subCategory: "bangles",
+        tag: "Artisanal",
+        description: "Pair of grand antique hinged kadas with makara terminals. Embedded with flat-cut polki diamonds and vibrant hand-enamelled peacock motifs along the inner rim.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 78.40,
+        netGoldWeight: 64.20,
+        stoneDetails: "11.60 ct Natural Polki Diamonds · Enamel Gems",
+        stoneValue: 115000,
+        makingChargePercent: 14,
+        hallmark: "BIS 916 Hallmarked with HUID",
+        certification: "IGI Polki Identification Certificate",
+        images: [
+          "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-POL-005",
+        name: "Jharokha Architectural Polki Ring",
+        slug: "jharokha-architectural-polki-ring",
+        category: "polki",
+        subCategory: "rings",
+        tag: "Iconic",
+        description: "Architectural statement ring shaped as a royal palace jharokha window with a prominent solitaire uncut diamond framed by seed pearls and red enamel lotus petals.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 14.80,
+        netGoldWeight: 11.20,
+        stoneDetails: "3.40 ct Syndicate Polki · Seed Pearls",
+        stoneValue: 42000,
+        makingChargePercent: 12,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "SGL Diamond & Polki Certificate",
+        images: [
+          "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-POL-006",
+        name: "Surya Kundan Polki Pendant Set",
+        slug: "surya-kundan-polki-pendant-set",
+        category: "polki",
+        subCategory: "pendants",
+        tag: "Daily Luxury",
+        description: "Radiant sunburst polki medallion suspended on a delicate 22K gold chain with matching stud tops. Reversible enamelled rear detailing with blue sapphire accents.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 22.40,
+        netGoldWeight: 17.80,
+        stoneDetails: "4.20 ct Uncut Polki Diamonds · Natural Sapphires",
+        stoneValue: 48000,
+        makingChargePercent: 12,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "BIS & IGI Certified",
+        images: [
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-GLD-001",
+        name: "Hawa Mahal Filigree Gold Necklace",
+        slug: "hawa-mahal-filigree-gold-necklace",
+        category: "gold",
+        subCategory: "necklaces",
+        tag: "Pure 22K Gold",
+        description: "Crafted purely in 22K yellow gold with zero stones, celebrating the delicate latticework of Jaipur's Palace of Winds. Every link is hand-twisted with microscopic wire filigree.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 48.20,
+        netGoldWeight: 48.20,
+        stoneDetails: "No stones · 100% Solid Gold",
+        stoneValue: 0,
+        makingChargePercent: 11,
+        hallmark: "BIS 916 Hallmarked with HUID",
+        certification: "Government Approved Assaying Laboratory Certificate",
+        images: [
+          "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-GLD-002",
+        name: "Temple Lakshmi Kasu Mala",
+        slug: "temple-lakshmi-kasu-mala",
+        category: "gold",
+        subCategory: "necklaces",
+        tag: "Auspicious Heritage",
+        description: "Sacred heirloom coin necklace featuring 31 individual embossed coins of Goddess Lakshmi seated on a lotus, bordered by miniature repoussé beads.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 64.50,
+        netGoldWeight: 64.50,
+        stoneDetails: "No stones · 100% Solid 22K Gold",
+        stoneValue: 0,
+        makingChargePercent: 12,
+        hallmark: "BIS 916 with HUID",
+        certification: "BIS Hallmarking Guarantee",
+        images: [
+          "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-GLD-003",
+        name: "Jaipur Gokhru Gold Bangles (Set of 4)",
+        slug: "jaipur-gokhru-gold-bangles-set",
+        category: "gold",
+        subCategory: "bangles",
+        tag: "Royal Classic",
+        description: "Traditional Marwari spiked gold bangles known as Gokhru, worn by Rajasthani aristocracy since centuries. Cast in solid 22K gold with intricate fluting.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 88.00,
+        netGoldWeight: 88.00,
+        stoneDetails: "No stones · Solid Gold",
+        stoneValue: 0,
+        makingChargePercent: 10.5,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "BIS Hallmarked Set",
+        images: [
+          "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-GLD-004",
+        name: "Royal Peacock Antique Jhumkas",
+        slug: "royal-peacock-antique-jhumkas",
+        category: "gold",
+        subCategory: "earrings",
+        tag: "Bestseller",
+        description: "Sculptural dancing peacock stud with three-tiered bell jhumka drops, finished with fine gold ghungroo balls. Completely handcrafted in solid 22K gold.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 24.30,
+        netGoldWeight: 24.30,
+        stoneDetails: "Zero stones · Pure Gold",
+        stoneValue: 0,
+        makingChargePercent: 13,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "Hallmarked with HUID",
+        images: [
+          "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-GLD-005",
+        name: "Navratna Heritage Astrological Ring",
+        slug: "navratna-heritage-astrological-ring",
+        category: "gold",
+        subCategory: "rings",
+        tag: "Sacred Nine Gems",
+        description: "Sacred Vedic alignment of nine unheated, untreated natural precious gemstones set in 22K gold.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 12.50,
+        netGoldWeight: 10.20,
+        stoneDetails: "Natural Navratna certified gemstone cabochons (2.30 ct)",
+        stoneValue: 32000,
+        makingChargePercent: 12,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "IGI Gemological Identification",
+        images: [
+          "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-GLD-006",
+        name: "Aipan Geometric Gold Kada",
+        slug: "aipan-geometric-gold-kada",
+        category: "gold",
+        subCategory: "bangles",
+        tag: "Gentleman / Unisex",
+        description: "Substantial solid 22K gold kada featuring geometric Vedic patterns and brushed satin outer face with bevelled high-polish rims.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 36.40,
+        netGoldWeight: 36.40,
+        stoneDetails: "Pure Gold",
+        stoneValue: 0,
+        makingChargePercent: 10,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "BIS HUID Verified",
+        images: [
+          "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-DIA-001",
+        name: "Nizam Solitaire Diamond Collar Necklace",
+        slug: "nizam-solitaire-diamond-collar-necklace",
+        category: "diamond",
+        subCategory: "necklaces",
+        tag: "High Jewellery",
+        description: "Breathtaking diamond rivière necklace featuring a graduated cascade of 118 round brilliant natural diamonds of E-F colour and VVS clarity set in 18K white gold.",
+        metal: "White Gold",
+        purity: "18K",
+        grossWeight: 38.60,
+        netGoldWeight: 34.20,
+        stoneDetails: "8.45 ct Natural Diamonds · E-F Colour · VVS Clarity",
+        stoneValue: 485000,
+        makingChargePercent: 12,
+        hallmark: "BIS 750 Hallmarked",
+        certification: "GIA & IGI International Grading Report",
+        images: [
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-DIA-002",
+        name: "Koh-i-Noor Oval Solitaire Ring",
+        slug: "koh-i-noor-oval-solitaire-ring",
+        category: "diamond",
+        subCategory: "rings",
+        tag: "Signature Solitaire",
+        description: "Magnificent 1.50 ct Oval Brilliant natural solitaire diamond (D Colour, VVS1 Clarity, Excellent Polish & Symmetry) mounted on an 18K yellow gold band lined with micro-pavé diamonds.",
+        metal: "Two-Tone Gold (18K)",
+        purity: "18K",
+        grossWeight: 5.20,
+        netGoldWeight: 4.80,
+        stoneDetails: "1.50 ct Center Oval (GIA) + 0.45 ct Accent Pavé",
+        stoneValue: 395000,
+        makingChargePercent: 10,
+        hallmark: "BIS 750 Hallmarked",
+        certification: "GIA Dossier + Laser Inscription",
+        images: [
+          "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-DIA-003",
+        name: "Emerald-Cut Diamond Tennis Bracelet",
+        slug: "emerald-cut-diamond-tennis-bracelet",
+        category: "diamond",
+        subCategory: "bangles",
+        tag: "Modern Classic",
+        description: "Seamless line of 42 matched emerald-cut natural diamonds set in minimal 4-prong baskets of 18K white gold. Superb clarity and mirror reflections.",
+        metal: "White Gold",
+        purity: "18K",
+        grossWeight: 21.40,
+        netGoldWeight: 18.60,
+        stoneDetails: "6.80 ct Natural Emerald Cuts · F-G Colour · VS Clarity",
+        stoneValue: 360000,
+        makingChargePercent: 11,
+        hallmark: "BIS 750 Hallmarked",
+        certification: "IGI Diamond Bracelet Certificate",
+        images: [
+          "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-DIA-004",
+        name: "Cascading Diamond Chandelier Earrings",
+        slug: "cascading-diamond-chandelier-earrings",
+        category: "diamond",
+        subCategory: "earrings",
+        tag: "Statement Luxe",
+        description: "Dramatic articulated earrings with pear and marquise diamonds flowing from round studs. Designed with delicate kinetic joints that dance with every movement.",
+        metal: "Rose Gold",
+        purity: "18K",
+        grossWeight: 18.20,
+        netGoldWeight: 16.40,
+        stoneDetails: "4.20 ct Natural Pear & Marquise Diamonds · E-F · VVS",
+        stoneValue: 240000,
+        makingChargePercent: 13,
+        hallmark: "BIS 750 Hallmarked",
+        certification: "IGI Certificate",
+        images: [
+          "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-DIA-005",
+        name: "Eternity Shared-Prong Diamond Band",
+        slug: "eternity-shared-prong-diamond-band",
+        category: "diamond",
+        subCategory: "rings",
+        tag: "Everyday Elegance",
+        description: "Full eternity band featuring 18 round brilliant natural diamonds set in shared scallop prongs of 18K yellow gold.",
+        metal: "Yellow Gold",
+        purity: "18K",
+        grossWeight: 4.10,
+        netGoldWeight: 3.60,
+        stoneDetails: "1.20 ct Round Brilliant Diamonds · F Colour · VVS",
+        stoneValue: 88000,
+        makingChargePercent: 12,
+        hallmark: "BIS 750 Hallmarked",
+        certification: "IGI Hallmarked Report",
+        images: [
+          "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-DIA-006",
+        name: "Dewdrop Diamond Pendant with 18K Chain",
+        slug: "dewdrop-diamond-pendant-18k-chain",
+        category: "diamond",
+        subCategory: "pendants",
+        tag: "Graceful Gift",
+        description: "Tear-drop cluster pendant featuring a 0.50 ct center natural diamond framed by micro halos, suspended on an Italian 18K white gold wheat chain.",
+        metal: "White Gold",
+        purity: "18K",
+        grossWeight: 6.40,
+        netGoldWeight: 5.80,
+        stoneDetails: "0.85 ct Total Natural Diamonds · G Colour · VVS",
+        stoneValue: 62000,
+        makingChargePercent: 12,
+        hallmark: "BIS 750 Hallmarked",
+        certification: "IGI Verified Pendant",
+        images: [
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-BRD-001",
+        name: "The Royal Jaipur Bridal Trousseau Set",
+        slug: "royal-jaipur-bridal-trousseau-set",
+        category: "bridal",
+        subCategory: "necklaces",
+        tag: "Grand Heirloom",
+        description: "The pinnacle of Marwari bridal heritage. Complete five-piece ensemble: Grand Jharokha Choker, Multi-Tier Raani Haar, Chandbali Jhumkas, Mathapatti with Borla, and Dual Haathphool.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 318.50,
+        netGoldWeight: 242.00,
+        stoneDetails: "64.50 ct Syndicate Polki · 85.00 ct Emeralds · Pearls",
+        stoneValue: 680000,
+        makingChargePercent: 16,
+        hallmark: "BIS 916 Hallmarked on all pieces with HUID",
+        certification: "Master Gemological Heritage Dossier & Insurance Appraisal",
+        images: [
+          "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: false
+      },
+      {
+        id: "JSR-BRD-002",
+        name: "Gulab Bagh Emerald & Polki Choker Set",
+        slug: "gulab-bagh-emerald-polki-choker-set",
+        category: "bridal",
+        subCategory: "necklaces",
+        tag: "Jaipur Royal",
+        description: "Inspired by Jaipur's royal rose gardens. Features cushion-shaped natural Colombian emerald cabochons surrounded by double halos of open polki diamonds with matching chandelier earrings.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 142.00,
+        netGoldWeight: 104.50,
+        stoneDetails: "34.20 ct Uncut Polki Diamonds · 52.00 ct Emeralds",
+        stoneValue: 380000,
+        makingChargePercent: 15,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "IGI Polki & Emerald Certification",
+        images: [
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: false
+      },
+      {
+        id: "JSR-BRD-003",
+        name: "Noor-ul-Ain Solitaire Diamond Mangalsutra",
+        slug: "noor-ul-ain-solitaire-diamond-mangalsutra",
+        category: "bridal",
+        subCategory: "necklaces",
+        tag: "Sacred Union",
+        description: "Modern bridal mangalsutra blending sacred black onyx beads with an 18K yellow gold centerpiece holding a certified 0.75 ct round brilliant diamond flanked by floral pavé petals.",
+        metal: "Yellow Gold",
+        purity: "18K",
+        grossWeight: 14.20,
+        netGoldWeight: 11.80,
+        stoneDetails: "1.15 ct Natural Diamonds · G Colour · VVS",
+        stoneValue: 142000,
+        makingChargePercent: 12,
+        hallmark: "BIS 750 Hallmarked",
+        certification: "IGI Certified Diamond",
+        images: [
+          "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-BRD-004",
+        name: "Vintage Meenakari Polki Hathphool",
+        slug: "vintage-meenakari-polki-hathphool",
+        category: "bridal",
+        subCategory: "bangles",
+        tag: "Heritage Craft",
+        description: "Traditional hand adornment connecting an adjustable polki ring to an ornate wrist kada with five delicate seed-pearl and gold chains. Detailed with royal pigeon-blood meenakari.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 46.80,
+        netGoldWeight: 38.20,
+        stoneDetails: "7.50 ct Syndicate Polki · 14.00 ct Seed Pearls",
+        stoneValue: 85000,
+        makingChargePercent: 14,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "IGI Certified Hathphool",
+        images: [
+          "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-BRD-005",
+        name: "Heritage Polki Maang Tikka with Borla",
+        slug: "heritage-polki-maang-tikka-borla",
+        category: "bridal",
+        subCategory: "pendants",
+        tag: "Rajasthani Royalty",
+        description: "Traditional spherical Rajasthani Borla crowned with a crescent jharokha maang tikka, encrusted with flat-cut polki diamonds and a cascade of red spinel drops.",
+        metal: "Yellow Gold",
+        purity: "22K",
+        grossWeight: 26.50,
+        netGoldWeight: 21.00,
+        stoneDetails: "5.20 ct Polki Diamonds · 8.40 ct Spinels",
+        stoneValue: 58000,
+        makingChargePercent: 13,
+        hallmark: "BIS 916 Hallmarked",
+        certification: "BIS & IGI Certified",
+        images: [
+          "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: true
+      },
+      {
+        id: "JSR-BRD-006",
+        name: "Imperial Diamond Solitaire Bridal Set",
+        slug: "imperial-diamond-solitaire-bridal-set",
+        category: "bridal",
+        subCategory: "necklaces",
+        tag: "Modern Royalty",
+        description: "Full three-piece modern bridal diamond suite: A cascading floral diamond collar necklace, chandelier drop earrings, and matching articulated bracelet in 18K white gold.",
+        metal: "White Gold",
+        purity: "18K",
+        grossWeight: 74.00,
+        netGoldWeight: 65.50,
+        stoneDetails: "14.80 ct Total Natural Diamonds · F-G Colour · VVS",
+        stoneValue: 780000,
+        makingChargePercent: 12,
+        hallmark: "BIS 750 Hallmarked",
+        certification: "GIA & IGI Master Dossier",
+        images: [
+          "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1000&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
+        ],
+        readyToShip: false
+      }
+    ];
+
+    /* Embedded Policies from Brief */
+    const policiesData = {
+      "14-day-exchange": {
+        title: "14-Day Exchange Policy",
+        tagline: "Your Choice. Your Confidence.",
+        promise: "Exchange within 14 days at 100% of the original invoice value, without any deduction, for eligible gold, diamond and polki jewellery.",
+        points: [
+          "The 14-day period begins on the date of delivery recorded by the delivery provider.",
+          "The original invoice or verifiable purchase record must be provided.",
+          "The jewellery must be returned in its original, undamaged and unaltered condition, with applicable certificates and accessories.",
+          "Gold, diamond and polki jewellery will be assessed under the relevant category-specific verification process.",
+          "Custom-made, personalised and specially commissioned jewellery may be excluded, provided the exclusions are disclosed before purchase and remain subject to applicable law.",
+          "The exchange value will be adjusted against an eligible replacement purchase. This policy does not promise a cash refund for a change of mind.",
+          "Any statutory consumer rights and remedies remain unaffected.",
+          "Customers must contact customer support to initiate an exchange and receive return instructions."
+        ],
+        opNote: "Operational requirement: No deduction should be applied to an otherwise eligible exchange promised at 100% of invoice value."
+      },
+      "lifetime-buyback": {
+        title: "Lifetime Buyback Policy",
+        tagline: "A Relationship That Lasts Beyond the Purchase",
+        promise: "We aim to provide lifetime buyback assistance for eligible jewellery purchased from Jai Sri Ram Jewellers, subject to physical verification and valuation methodology.",
+        points: [
+          "Gold Component: Jewellery will be assessed for authenticity and purity. Eligible net metal weight will be determined, strictly excluding stones and non-metal material. Valued using applicable gold rate on buyback date.",
+          "Diamond & Polki Component: Stones will be assessed separately for type, authenticity, condition and specifications. Value based on documented brand valuation methodology, not automatically equal to original invoice value.",
+          "Original invoice and available certificates may be requested to help verify the product.",
+          "Customer will receive the proposed valuation breakdown before accepting buyback.",
+          "Buyback is subject to applicable Indian law, identity verification (PAN/Aadhaar where required), and internal acceptance procedures.",
+          "The lifetime buyback promise does not mean a guaranteed return of the original purchase price or making charges, taxes or discounts."
+        ],
+        opNote: "Valuation transparency: The objective is to offer customers a clear route to have eligible jewellery assessed in the future."
+      },
+      "lifetime-maintenance": {
+        title: "Lifetime Maintenance & Repairs",
+        tagline: "Care That Continues",
+        promise: "Eligible jewellery may be presented for maintenance assessment throughout its lifetime.",
+        points: [
+          "Complimentary Services: Inspection, ultrasonic cleaning, steam cleaning, and prong tightness checks are complimentary.",
+          "Paid Repairs: Repairs, replacement stones, additional gold materials, resizing and structural alterations may attract charges.",
+          "All charges must be communicated and approved by the customer before work begins.",
+          "Normal wear and tear, accidental damage, missing stones and unauthorised third-party alterations may not qualify for complimentary repairs.",
+          "Customers should retain invoices and certificates for verification."
+        ]
+      },
+      "shipping-delivery": {
+        title: "Shipping & Delivery Policy",
+        tagline: "Insured to Your Doorstep",
+        promise: "100% insured, trackable delivery across India with tamper-evident security packing.",
+        points: [
+          "Dispatch Timelines: Ready-to-Ship items dispatched in 2–4 business days; Made-to-Order items in 14–21 business days.",
+          "Full Insurance: All packages are 100% insured in transit until physical delivery OTP verification at your doorstep.",
+          "Tamper-Evident Packaging: Delivered in high-security boxes via specialized bullion/jewellery logistics partners.",
+          "Delivery Discrepancies: In case of delay, damage or delivery discrepancies, our Jaipur concierge assists within 24 hours."
+        ]
+      },
+      "cancellation": {
+        title: "Cancellation Policy",
+        tagline: "Clarity & Fairness",
+        promise: "Straightforward cancellation before order dispatch.",
+        points: [
+          "Ready-to-ship orders may be cancelled at no fee before dispatch.",
+          "Custom-made or bespoke commissions may be cancelled within 24 hours of placement before manufacturing begins.",
+          "Refunds for cancelled orders are returned to original payment source within 5–7 business days."
+        ]
+      },
+      "damaged-incorrect": {
+        title: "Damaged, Defective or Incorrect Orders",
+        tagline: "Prompt Remedy Protocol",
+        promise: "Immediate priority resolution if an order arrives damaged or incorrect.",
+        points: [
+          "Please report any damage or defect within 48 hours of delivery with photos or unboxing footage.",
+          "We arrange complimentary insured reverse pickup from your home.",
+          "Upon quick inspection, an immediate replacement or full adjustment is provided."
+        ]
+      },
+      "quality-authenticity": {
+        title: "Quality & Authenticity Assurance",
+        tagline: "Every Karat Substantiated",
+        promise: "Zero compromises on purity, metal weight, or gemstone certification.",
+        points: [
+          "100% gold hallmarked with BIS triangular logo, karat purity, and 6-digit HUID code.",
+          "Natural diamonds certified by international gemological laboratories (GIA / IGI).",
+          "Uncut polki diamonds set using authentic 24K gold foil Jadau technique.",
+          "Permanent digital purchase records maintained to facilitate future lifetime maintenance and buyback."
+        ]
+      },
+      "privacy-terms": {
+        title: "Privacy, Payments & Terms",
+        tagline: "Security & Legal Compliance",
+        promise: "Bank-grade 256-bit SSL encryption and strict data protection.",
+        points: [
+          "Payment processing handled securely via RBI-compliant gateways (Razorpay, Net Banking, UPI).",
+          "We never store card numbers, CVVs, or bank credentials.",
+          "Compliant with Indian Consumer Protection (E-Commerce) Rules and Digital Personal Data Protection standards."
+        ]
+      },
+      "grievance-redressal": {
+        title: "Grievance Redressal Desk",
+        tagline: "Direct Family Accountability",
+        promise: "Dedicated officer and direct escalation per Indian E-Commerce Rules, 2020.",
+        points: [
+          "Grievance Officer: Customer Redressal Cell, Jai Sri Ram Jewellers",
+          "Address: Showroom near Johari Bazar & M.I. Road Crossing, Jaipur, Rajasthan 302001",
+          "Email: grievance@jaisriramjewellers.com / support@jaisriramjewellers.com",
+          "Phone: +91 141 256 9090 / +91 98290 19900",
+          "Response: Acknowledgement within 48 hours; resolution within 30 days."
+        ]
+      }
+    };
+
+    /* =====================================================================
+       TRANSPARENT PRICING CALCULATION FORMULA
+       ===================================================================== */
+    function calculatePrice(product, customGoldRate) {
+      let ratePerGram = customGoldRate;
+      if (!ratePerGram) {
+        if (product.purity.includes('22K') || product.purity.includes('916')) {
+          ratePerGram = currentRates.gold22k;
+        } else if (product.purity.includes('18K') || product.purity.includes('750')) {
+          ratePerGram = currentRates.gold18k;
+        } else {
+          ratePerGram = currentRates.gold24k;
+        }
+      }
+
+      const netWeight = product.netGoldWeight || 0;
+      const goldValue = Math.round(netWeight * ratePerGram);
+      const makingPercent = product.makingChargePercent || 12;
+      const makingCharges = Math.round(goldValue * (makingPercent / 100));
+      const stoneValue = product.stoneValue || 0;
+      const subtotal = goldValue + makingCharges + stoneValue;
+      const gst = Math.round(subtotal * 0.03);
+      const total = subtotal + gst;
+
+      return {
+        ratePerGram,
+        netWeight,
+        goldValue,
+        makingPercent,
+        makingCharges,
+        stoneValue,
+        subtotal,
+        gst,
+        total
+      };
+    }
+
+    function formatINR(val) {
+      return '₹' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    /* Rate Adjuster Modal Functions */
+    function openRateAdjusterModal() {
+      const modal = document.getElementById('rateAdjusterModal');
+      if (modal) modal.style.display = 'flex';
+      updateAdjusterLabels();
+    }
+
+    function closeRateAdjusterModal() {
+      const modal = document.getElementById('rateAdjusterModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function updateAdjusterLabels() {
+      const l22 = document.getElementById('adjRate22kLabel');
+      const l18 = document.getElementById('adjRate18kLabel');
+      const f22 = document.getElementById('floatRate22k');
+      const t24 = document.getElementById('ticker24k');
+      const t22 = document.getElementById('ticker22k');
+      const t18 = document.getElementById('ticker18k');
+
+      if (l22) l22.textContent = formatINR(currentRates.gold22k) + '/g';
+      if (l18) l18.textContent = formatINR(currentRates.gold18k) + '/g';
+      if (f22) f22.textContent = formatINR(currentRates.gold22k);
+      if (t24) t24.textContent = formatINR(currentRates.gold24k) + '/g';
+      if (t22) t22.textContent = formatINR(currentRates.gold22k) + '/g';
+      if (t18) t18.textContent = formatINR(currentRates.gold18k) + '/g';
+    }
+
+    function adjustRate(metal, delta) {
+      if (currentRates[metal] !== undefined) {
+        currentRates[metal] = Math.max(1000, currentRates[metal] + delta);
+        updateAdjusterLabels();
+        renderCatalog();
+        showToast(`Adjusted ${metal.toUpperCase()} Rate by ${delta > 0 ? '+' : ''}₹${delta}/g`);
+      }
+    }
+
+    function resetRatesBenchmark() {
+      currentRates.gold24k = 7845;
+      currentRates.gold22k = 7192;
+      currentRates.gold18k = 5884;
+      updateAdjusterLabels();
+      renderCatalog();
+      showToast('Reset rates to Jaipur Bullion official benchmark.');
+    }
+
+    /* =====================================================================
+       CATALOG RENDERING & FILTERING
+       ===================================================================== */
+    function renderCatalog() {
+      const grid = document.getElementById('productsGrid');
+      if (!grid) return;
+
+      let filtered = productsData.filter(p => {
+        const matchesCategory = (activeCategory === 'all') || (p.category === activeCategory);
+        const matchesSearch = !searchQuery ||
+          p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.subCategory.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.description.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      // Sorting
+      if (sortMode === 'price-asc') {
+        filtered.sort((a, b) => calculatePrice(a).total - calculatePrice(b).total);
+      } else if (sortMode === 'price-desc') {
+        filtered.sort((a, b) => calculatePrice(b).total - calculatePrice(a).total);
+      } else if (sortMode === 'weight-desc') {
+        filtered.sort((a, b) => b.netGoldWeight - a.netGoldWeight);
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column:1/-1; text-align:center; padding:60px 20px;">
+            <p style="font-size:18px; color:var(--maroon); margin-bottom:10px;">No jewellery pieces found matching your criteria.</p>
+            <button class="btn-gold" onclick="resetFilters()">View All 24 Pieces</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => {
+        const pricing = calculatePrice(p);
+        const isWishlisted = wishlist.some(w => w.id === p.id);
+        const tagClass = p.tag === 'Bestseller' ? 'tag-bestseller' : 'tag-hallmark';
+
+        return `
+          <div class="product-card" data-id="${p.id}">
+            <div class="product-badge-wrap">
+              <span class="p-tag ${tagClass}">${p.tag || 'BIS 916'}</span>
+              <span class="p-tag tag-certified">${p.purity} Gold</span>
+            </div>
+            <button class="wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="toggleWishlist('${p.id}', event)" title="Save to Wishlist">
+              ${isWishlisted ? '♥' : '♡'}
+            </button>
+            <div class="product-img-box" onclick="openProductDetail('${p.id}')">
+              <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
+              <button class="quick-view-btn">Inspect Specs & Breakdown</button>
+            </div>
+            <div class="product-info">
+              <div>
+                <div class="product-category-sub">${p.category} · ${p.subCategory}</div>
+                <h3 class="product-title" onclick="openProductDetail('${p.id}')">${p.name}</h3>
+                <div class="product-spec-pill">
+                  Net Gold: <strong>${p.netGoldWeight.toFixed(2)}g</strong> · ${p.stoneDetails.split('·')[0]}
+                </div>
+              </div>
+
+              <div class="price-box">
+                <div>
+                  <div class="price-label">Transparent Price</div>
+                  <div class="price-val">${formatINR(pricing.total)}</div>
+                  <div class="price-sub">Includes 3% GST & Making</div>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn-card-breakdown" onclick="openProductDetail('${p.id}')">Breakdown</button>
+                <button class="btn-card-add" onclick="addToCart('${p.id}')">+ Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function setCategoryFilter(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderCatalog();
+    }
+
+    function filterByCategory(cat) {
+      window.location.hash = 'shop';
+      activeCategory = cat;
+      const chips = document.querySelectorAll('.filter-chip');
+      chips.forEach(c => {
+        if (c.textContent.toLowerCase().includes(cat)) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+      renderCatalog();
+    }
+
+    function handleSearch(val) {
+      searchQuery = val;
+      renderCatalog();
+    }
+
+    function handleSort(mode) {
+      sortMode = mode;
+      renderCatalog();
+    }
+
+    function resetFilters() {
+      activeCategory = 'all';
+      searchQuery = '';
+      document.getElementById('catalogSearch').value = '';
+      setCategoryFilter('all', document.querySelector('.filter-chip'));
+    }
+
+    /* =====================================================================
+       PRODUCT DETAIL & PRICE BREAKDOWN MODAL
+       ===================================================================== */
+    function openProductDetail(productId, overrideRate) {
+      const p = productsData.find(item => item.id === productId);
+      if (!p) return;
+      activeProduct = p;
+
+      const pricing = calculatePrice(p, overrideRate);
+      const modal = document.getElementById('productModal');
+      const container = document.getElementById('pdmGridContent');
+
+      container.innerHTML = `
+        <!-- Gallery Column -->
+        <div class="pdm-gallery">
+          <div class="pdm-main-img-box">
+            <img src="${p.images[0]}" id="pdmMainImg" alt="${p.name}">
+          </div>
+          <div class="pdm-thumbs">
+            ${p.images.map((img, idx) => `
+              <div class="pdm-thumb ${idx === 0 ? 'active' : ''}" onclick="switchPdmThumb('${img}', this)">
+                <img src="${img}" alt="Angle ${idx + 1}">
+              </div>
+            `).join('')}
+          </div>
+          <div class="pdm-360-badge">
+            <span>🔄</span> 360° Inspection View Enabled · Hover to Zoom
+          </div>
+          <div style="font-size:12px; color:var(--charcoal-muted); margin-top:8px;">
+            <strong>Certifications:</strong> ${p.certification} · ${p.hallmark}
+          </div>
+        </div>
+
+        <!-- Details & Pricing Column -->
+        <div>
+          <div style="font-size:11px; color:var(--gold-dark); text-transform:uppercase; letter-spacing:0.15em; font-weight:700;">
+            ${p.category.toUpperCase()} FINE JEWELLERY · JAIPUR
+          </div>
+          <h2 style="font-size:30px; color:var(--maroon); margin:6px 0 12px; line-height:1.2;">
+            ${p.name}
+          </h2>
+          <p style="font-size:13px; color:var(--charcoal-muted); line-height:1.6; margin-bottom:16px;">
+            ${p.description}
+          </p>
+
+          <!-- Specifications Table -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; background:#FFF; border:1px solid #ECE3D4; padding:14px; border-radius:4px; font-size:12px; margin-bottom:18px;">
+            <div><strong>Metal & Purity:</strong> ${p.metal} (${p.purity})</div>
+            <div><strong>Gross Weight:</strong> ${p.grossWeight.toFixed(2)} g</div>
+            <div><strong>Net Gold Weight:</strong> ${p.netGoldWeight.toFixed(2)} g</div>
+            <div><strong>Hallmark:</strong> ${p.hallmark}</div>
+            <div style="grid-column:1/-1;"><strong>Stone Details:</strong> ${p.stoneDetails}</div>
+          </div>
+
+          <!-- THE TRANSPARENT PRICE BREAKDOWN FORMULA ENGINE -->
+          <div class="price-breakdown-card">
+            <div class="pb-header">
+              <h4>⚖ Transparent Price Breakdown</h4>
+              <span class="pb-badge">100% Disclosed</span>
+            </div>
+
+            <!-- Rate Adjuster Slider -->
+            <div class="slider-wrap">
+              <div class="slider-label">
+                <span>Gold Rate Applied (${p.purity}):</span>
+                <span id="sliderRateLabel">${formatINR(pricing.ratePerGram)} / gram</span>
+              </div>
+              <input type="range" class="rate-slider" min="5000" max="10000" step="50" value="${pricing.ratePerGram}" 
+                     oninput="updateModalPricingSlider('${p.id}', this.value)">
+              <div style="display:flex; justify-content:space-between; font-size:10px; color:#9CA3AF; margin-top:2px;">
+                <span>₹5,000/g</span>
+                <span>Slide to test market rate adjustment</span>
+                <span>₹10,000/g</span>
+              </div>
+            </div>
+
+            <div class="pb-row">
+              <span>Gold Component (${p.netGoldWeight.toFixed(2)}g × ${formatINR(pricing.ratePerGram)}/g):</span>
+              <span id="pbGoldVal">${formatINR(pricing.goldValue)}</span>
+            </div>
+            <div class="pb-row">
+              <span>Artisanal Making Charges (${p.makingChargePercent}%):</span>
+              <span id="pbMakingVal">${formatINR(pricing.makingCharges)}</span>
+            </div>
+            <div class="pb-row">
+              <span>Natural Stone & Gem Value:</span>
+              <span>${formatINR(pricing.stoneValue)}</span>
+            </div>
+            <div class="pb-row" style="color:#6B7280; font-size:12px;">
+              <span>Taxable Subtotal:</span>
+              <span id="pbSubtotalVal">${formatINR(pricing.subtotal)}</span>
+            </div>
+            <div class="pb-row" style="color:#6B7280; font-size:12px;">
+              <span>Government GST (3%):</span>
+              <span id="pbGstVal">${formatINR(pricing.gst)}</span>
+            </div>
+            <div class="pb-row total-row">
+              <span>Final Transparent Total:</span>
+              <span id="pbTotalVal">${formatINR(pricing.total)}</span>
+            </div>
+            <div class="pb-formula-note">
+              Formula: Gold Value + Making Charges + Stone Value + 3% GST = Final Price. Zero artificial inflated discounts.
+            </div>
+          </div>
+
+          <!-- Pincode Delivery Estimator -->
+          <div class="pincode-card">
+            <div style="font-size:12px; font-weight:600; color:var(--maroon);">Check Delivery Timeline & Insurance</div>
+            <div class="pincode-form">
+              <input type="text" class="pincode-input" id="modalPincode" placeholder="Enter 6-digit PIN" maxlength="6">
+              <button class="btn-card-breakdown" onclick="checkPincode(${p.readyToShip})">Check</button>
+            </div>
+            <div class="pincode-result" id="pincodeResult"></div>
+          </div>
+
+          <!-- CTAs -->
+          <div style="display:flex; gap:12px; margin-top:20px;">
+            <button class="btn-maroon" style="flex:1; justify-content:center;" onclick="addToCart('${p.id}'); closeProductModal(); openCartDrawer();">
+              Add to Bag · ${formatINR(pricing.total)}
+            </button>
+            <a href="https://wa.me/919829019900?text=Hello%20Jai%20Sri%20Ram%20Jewellers,%20I%20am%20interested%20in%20${encodeURIComponent(p.name)}%20(SKU:%20${p.id}).%20Please%20share%20details." 
+               target="_blank" class="btn-outline-gold" style="padding:11px 16px;">
+              💬 Enquire on WhatsApp
+            </a>
+          </div>
+
+          <!-- Product Policy Accordions -->
+          <div style="margin-top:24px;">
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                <span>14-Day Exchange Promise</span>
+                <span>+</span>
+              </button>
+              <div class="accordion-content">
+                Exchange within 14 days of recorded delivery at 100% of original invoice value for eligible jewellery with zero deduction, adjusted against replacement purchase.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                <span>Lifetime Buyback Assistance</span>
+                <span>+</span>
+              </button>
+              <div class="accordion-content">
+                Net gold weight valued at prevailing market gold rate on date of buyback. Diamonds and polki assessed under documented gemological valuation.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                <span>Lifetime Maintenance & Care</span>
+                <span>+</span>
+              </button>
+              <div class="accordion-content">
+                Complimentary cleaning, inspection, and prong checks at our Jaipur showroom for life. Repairs or stone additions quoted transparently before work begins.
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function switchPdmThumb(imgUrl, thumbEl) {
+      document.getElementById('pdmMainImg').src = imgUrl;
+      document.querySelectorAll('.pdm-thumb').forEach(t => t.classList.remove('active'));
+      thumbEl.classList.add('active');
+    }
+
+    function updateModalPricingSlider(productId, newRate) {
+      const p = productsData.find(item => item.id === productId);
+      if (!p) return;
+      const rate = Number(newRate);
+      document.getElementById('sliderRateLabel').textContent = formatINR(rate) + ' / gram';
+
+      const pricing = calculatePrice(p, rate);
+      document.getElementById('pbGoldVal').textContent = formatINR(pricing.goldValue);
+      document.getElementById('pbMakingVal').textContent = formatINR(pricing.makingCharges);
+      document.getElementById('pbSubtotalVal').textContent = formatINR(pricing.subtotal);
+      document.getElementById('pbGstVal').textContent = formatINR(pricing.gst);
+      document.getElementById('pbTotalVal').textContent = formatINR(pricing.total);
+    }
+
+    function checkPincode(readyToShip) {
+      const pin = document.getElementById('modalPincode').value.trim();
+      const res = document.getElementById('pincodeResult');
+      if (!/^\d{6}$/.test(pin)) {
+        res.style.color = '#DC2626';
+        res.textContent = 'Please enter a valid 6-digit Indian PIN code.';
+        return;
+      }
+      res.style.color = '#047857';
+      if (readyToShip) {
+        res.innerHTML = `✓ Delivery by <strong>3 to 4 Business Days</strong> to PIN ${pin}. Insured tamper-proof logistics.`;
+      } else {
+        res.innerHTML = `✓ Handcrafted bespoke commission: Delivered in <strong>14 to 18 Business Days</strong> to PIN ${pin}.`;
+      }
+    }
+
+    function toggleAccordion(btn) {
+      const content = btn.nextElementSibling;
+      const isOpen = content.classList.contains('open');
+      document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.accordion-trigger span:last-child').forEach(s => s.textContent = '+');
+      if (!isOpen) {
+        content.classList.add('open');
+        btn.querySelector('span:last-child').textContent = '−';
+      }
+    }
+
+    function closeProductModal() {
+      document.getElementById('productModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function handleModalOverlayClick(e) {
+      if (e.target.id === 'productModal') {
+        closeProductModal();
+      }
+    }
+
+    /* =====================================================================
+       SHOPPING BAG / CART LOGIC
+       ===================================================================== */
+    function addToCart(productId) {
+      const p = productsData.find(item => item.id === productId);
+      if (!p) return;
+
+      const existing = cart.find(item => item.id === productId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...p, qty: 1 });
+      }
+
+      updateCartBadge();
+      renderCartDrawer();
+      showToast(`Added ${p.name} to your Shopping Bag.`);
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(item => item.id !== productId);
+      updateCartBadge();
+      renderCartDrawer();
+    }
+
+    function updateCartQty(productId, delta) {
+      const item = cart.find(i => i.id === productId);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) {
+        removeFromCart(productId);
+      } else {
+        updateCartBadge();
+        renderCartDrawer();
+      }
+    }
+
+    function updateCartBadge() {
+      const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
+      const countEl = document.getElementById('cartCount');
+      if (countEl) countEl.textContent = totalItems;
+    }
+
+    function renderCartDrawer() {
+      const list = document.getElementById('cartItemsList');
+      const totalEl = document.getElementById('cartTotalPrice');
+      if (!list || !totalEl) return;
+
+      if (cart.length === 0) {
+        list.innerHTML = `
+          <div style="text-align:center; padding:50px 10px; color:var(--charcoal-muted);">
+            <div style="font-size:36px; margin-bottom:12px;">🛍</div>
+            <p>Your shopping bag is empty.</p>
+            <p style="font-size:12px; margin-top:6px;">Browse our 24 handcrafted heirlooms.</p>
+          </div>
+        `;
+        totalEl.textContent = '₹0';
+        return;
+      }
+
+      let grandTotal = 0;
+      list.innerHTML = cart.map(item => {
+        const pricing = calculatePrice(item);
+        const itemTotal = pricing.total * item.qty;
+        grandTotal += itemTotal;
+
+        return `
+          <div class="cart-item">
+            <img src="${item.images[0]}" class="cart-item-img" alt="${item.name}">
+            <div class="cart-item-info">
+              <div class="cart-item-title">${item.name}</div>
+              <div class="cart-item-spec">${item.purity} Gold · Net: ${item.netGoldWeight}g</div>
+              <div class="cart-item-price">${formatINR(pricing.total)}</div>
+              <div class="cart-qty-ctrl">
+                <button class="qty-btn" onclick="updateCartQty('${item.id}', -1)">−</button>
+                <span style="font-size:12px; font-weight:600;">${item.qty}</span>
+                <button class="qty-btn" onclick="updateCartQty('${item.id}', 1)">+</button>
+                <button onclick="removeFromCart('${item.id}')" style="margin-left:auto; color:#DC2626; font-size:11px;">Remove</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      totalEl.textContent = formatINR(grandTotal);
+    }
+
+    function openCartDrawer() {
+      renderCartDrawer();
+      document.getElementById('cartDrawer').classList.add('open');
+      document.getElementById('cartOverlay').style.display = 'block';
+    }
+
+    function closeCartDrawer() {
+      document.getElementById('cartDrawer').classList.remove('open');
+      document.getElementById('cartOverlay').style.display = 'none';
+    }
+
+    function proceedToCheckout() {
+      if (cart.length === 0) {
+        alert("Your bag is empty. Please add a jewellery piece first.");
+        return;
+      }
+      closeCartDrawer();
+      let total = cart.reduce((acc, item) => acc + (calculatePrice(item).total * item.qty), 0);
+      document.getElementById('rpPayableAmount').textContent = formatINR(total);
+      document.getElementById('checkoutModal').style.display = 'flex';
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').style.display = 'none';
+    }
+
+    function selectPayMethod(el) {
+      document.querySelectorAll('.rp-pay-method').forEach(m => m.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    function simulatePaymentSuccess() {
+      closeCheckoutModal();
+      cart = [];
+      updateCartBadge();
+      const orderId = 'JSR-' + Math.floor(100000 + Math.random() * 900000);
+      document.getElementById('confirmOrderId').textContent = `Order Confirmed: #${orderId}`;
+      document.getElementById('orderConfirmModal').style.display = 'flex';
+    }
+
+    function closeOrderConfirmModal() {
+      document.getElementById('orderConfirmModal').style.display = 'none';
+    }
+
+    /* =====================================================================
+       WISHLIST LOGIC
+       ===================================================================== */
+    function toggleWishlist(productId, e) {
+      if (e) e.stopPropagation();
+      const p = productsData.find(item => item.id === productId);
+      if (!p) return;
+
+      const idx = wishlist.findIndex(w => w.id === productId);
+      if (idx > -1) {
+        wishlist.splice(idx, 1);
+        showToast(`Removed from saved heirlooms.`);
+      } else {
+        wishlist.push(p);
+        showToast(`Saved ${p.name} to your wishlist.`);
+      }
+
+      document.getElementById('wishlistCount').textContent = wishlist.length;
+      renderCatalog();
+    }
+
+    function openWishlistModal() {
+      const container = document.getElementById('wishlistItemsList');
+      if (wishlist.length === 0) {
+        container.innerHTML = `
+          <div style="text-align:center; padding:40px; color:var(--charcoal-muted);">
+            <p>You have no saved jewellery heirlooms yet.</p>
+            <p style="font-size:12px; margin-top:6px;">Click the heart icon on any piece to save it for later.</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = wishlist.map(item => `
+          <div style="display:flex; gap:16px; align-items:center; padding:12px 0; border-bottom:1px solid #ECE3D4;">
+            <img src="${item.images[0]}" style="width:60px; height:60px; border-radius:4px; object-fit:cover;" alt="${item.name}">
+            <div style="flex:1;">
+              <div style="font-weight:600; color:var(--maroon);">${item.name}</div>
+              <div style="font-size:12px; color:#6B7280;">${item.purity} · ${formatINR(calculatePrice(item).total)}</div>
+            </div>
+            <button class="btn-card-add" onclick="addToCart('${item.id}'); closeWishlistModal(); openCartDrawer();">Move to Bag</button>
+            <button onclick="toggleWishlist('${item.id}')" style="color:#DC2626; font-size:16px; margin-left:8px;">✕</button>
+          </div>
+        `).join('');
+      }
+      document.getElementById('wishlistModal').style.display = 'flex';
+    }
+
+    function closeWishlistModal() {
+      document.getElementById('wishlistModal').style.display = 'none';
+    }
+
+    /* =====================================================================
+       POLICY HUB TAB LOGIC
+       ===================================================================== */
+    function openPolicyTab(policyKey, btn) {
+      const data = policiesData[policyKey];
+      if (!data) return;
+
+      const box = document.getElementById('policyContentBox');
+      box.innerHTML = `
+        <div class="policy-heading">${data.title}</div>
+        <div class="policy-subheading">${data.tagline}</div>
+        <div style="background:rgba(196,164,108,0.15); border:1px solid var(--gold); padding:14px; border-radius:4px; font-weight:600; font-size:13px; color:var(--maroon); margin-bottom:20px;">
+          Proposed Promise: "${data.promise}"
+        </div>
+        <ol class="policy-text-list">
+          ${data.points.map(pt => `<li>${pt}</li>`).join('')}
+        </ol>
+        ${data.opNote ? `<div class="policy-operational-note">${data.opNote}</div>` : ''}
+      `;
+
+      document.querySelectorAll('.policy-tab-item').forEach(b => b.classList.remove('active'));
+      if (btn) {
+        btn.classList.add('active');
+      } else {
+        // highlight matching tab
+        const allTabs = document.querySelectorAll('.policy-tab-item');
+        allTabs.forEach(t => {
+          if (t.getAttribute('onclick').includes(policyKey)) t.classList.add('active');
+        });
+      }
+    }
+
+    /* =====================================================================
+       KNOW YOUR JEWELLERY MINI GUIDE
+       ===================================================================== */
+    function switchGuide(type, btn) {
+      document.querySelectorAll('.guide-tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const guide = document.getElementById('guideContent');
+      if (type === 'huid') {
+        guide.innerHTML = `
+          <h3 style="font-size:24px; color:var(--gold-light); margin-bottom:12px;">The 6-Digit BIS Hallmark Unique Identification (HUID)</h3>
+          <p style="font-size:14px; line-height:1.8; color:#EAE1D3; margin-bottom:16px;">
+            In India, hallmarking protects consumers from purity fraud. Look for the 3 mandatory stamps laser-etched into your jewellery:<br>
+            1. <strong>BIS Triangle Logo</strong>: National standard certification.<br>
+            2. <strong>Karat Purity</strong>: 22K (916) or 18K (750).<br>
+            3. <strong>6-Digit Alphanumeric Code</strong>: Unique HUID code traceably registered with the Government Assaying Centre.
+          </p>
+          <div style="background:rgba(196,164,108,0.15); border:1px solid var(--gold); padding:16px; border-radius:4px; font-size:13px; color:var(--gold-light);">
+            💡 <strong>Our Commitment:</strong> Every invoice lists your exact HUID. You can verify it instantly on the official BIS Care app before accepting delivery.
+          </div>
+        `;
+      } else if (type === 'polki') {
+        guide.innerHTML = `
+          <h3 style="font-size:24px; color:var(--gold-light); margin-bottom:12px;">What is Authentic Polki & Jadau Craftsmanship?</h3>
+          <p style="font-size:14px; line-height:1.8; color:#EAE1D3; margin-bottom:16px;">
+            Polki consists of natural, un-faceted rough-cut diamonds in their original organic state. In the imperial Jadau technique perfected in Jaipur:<br>
+            • Uncut diamonds are seated atop pure <strong>24K hyper-refined gold foil (Daak)</strong> to maximize light refraction.<br>
+            • The gold is hand-pressed around the edges without claws or chemical adhesives.<br>
+            • The reverse side is hand-enamelled with traditional <strong>Gulabi Meenakari</strong> to protect the gold and soothe the skin.
+          </p>
+        `;
+      } else if (type === 'pricing') {
+        guide.innerHTML = `
+          <h3 style="font-size:24px; color:var(--gold-light); margin-bottom:12px;">Our Transparent Pricing Formula</h3>
+          <p style="font-size:14px; line-height:1.8; color:#EAE1D3; margin-bottom:16px;">
+            Traditional retailers often mask high markups inside inflated gross weights. At Jai Sri Ram Jewellers, we calculate every rupee openly:<br>
+            <code>Total = (Net Gold Weight × Day's Benchmark Rate) + Making Charges + Certified Stone Value + 3% GST</code><br><br>
+            Stone weight is <strong>never</strong> billed as gold weight. If a necklace weighs 84g with 22g of stones, you pay gold rate strictly on 62g.
+          </p>
+        `;
+      } else if (type === '4cs') {
+        guide.innerHTML = `
+          <h3 style="font-size:24px; color:var(--gold-light); margin-bottom:12px;">Diamond 4Cs: The Connoisseur's Standard</h3>
+          <p style="font-size:14px; line-height:1.8; color:#EAE1D3; margin-bottom:16px;">
+            • <strong>Cut:</strong> Determines optical brilliance and fire. We curate Triple Excellent cuts.<br>
+            • <strong>Colour:</strong> We feature colorless (D-F) and near-colorless (G-H) natural diamonds.<br>
+            • <strong>Clarity:</strong> Selected between VVS (Very Very Slightly Included) and VS.<br>
+            • <strong>Carat:</strong> Precise laser-measured weight documented on GIA/IGI dossiers.
+          </p>
+        `;
+      }
+    }
+
+    /* =====================================================================
+       SHOWROOM APPOINTMENT FORM
+       ===================================================================== */
+    function handleAppointmentSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('bName').value;
+      const date = document.getElementById('bDate').value;
+      const type = document.getElementById('bType').value;
+      const interest = document.getElementById('bInterest').value;
+
+      alert(`Namaste ${name}! Your ${type === 'showroom' ? 'Jaipur Showroom Visit' : 'Virtual Video Consultation'} on ${date} has been reserved. Our family concierge will contact you shortly.`);
+      e.target.reset();
+    }
+
+    /* =====================================================================
+       ADMIN LIVE RATE CONTROL MODAL
+       ===================================================================== */
+    function openAdminModal() {
+      document.getElementById('admin24k').value = currentRates.gold24k * 10;
+      document.getElementById('admin22k').value = currentRates.gold22k * 10;
+      document.getElementById('admin18k').value = currentRates.gold18k * 10;
+      document.getElementById('adminModal').style.display = 'flex';
+    }
+
+    function closeAdminModal() {
+      document.getElementById('adminModal').style.display = 'none';
+    }
+
+    function saveAdminRates() {
+      const r24 = Number(document.getElementById('admin24k').value);
+      const r22 = Number(document.getElementById('admin22k').value);
+      const r18 = Number(document.getElementById('admin18k').value);
+
+      if (r24 > 0) currentRates.gold24k = Math.round(r24 / 10);
+      if (r22 > 0) currentRates.gold22k = Math.round(r22 / 10);
+      if (r18 > 0) currentRates.gold18k = Math.round(r18 / 10);
+
+      // Update Ticker
+      document.getElementById('ticker24k').textContent = formatINR(currentRates.gold24k) + '/g';
+      document.getElementById('ticker22k').textContent = formatINR(currentRates.gold22k) + '/g';
+      document.getElementById('ticker18k').textContent = formatINR(currentRates.gold18k) + '/g';
+
+      // Toggle Draft banner
+      const bannerOpt = document.getElementById('adminDraftBannerToggle').value;
+      document.getElementById('draftBanner').style.display = (bannerOpt === 'show') ? 'flex' : 'none';
+
+      closeAdminModal();
+      renderCatalog();
+      showToast("Live benchmark gold rates updated! All prices recalculated.");
+    }
+
+    /* =====================================================================
+       HERO GOLD DUST PARTICLE CANVAS (60 FPS)
+       ===================================================================== */
+    function initHeroCanvas() {
+      const canvas = document.getElementById('hero-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+
+      function resize() {
+        width = canvas.width = canvas.offsetWidth;
+        height = canvas.height = canvas.offsetHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      const particleCount = 45;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 2 + 0.8,
+          speedY: Math.random() * 0.4 + 0.15,
+          speedX: (Math.random() - 0.5) * 0.3,
+          opacity: Math.random() * 0.6 + 0.2
+        });
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = '#C4A46C';
+
+        particles.forEach(p => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(196, 164, 108, ${p.opacity})`;
+          ctx.fill();
+
+          p.y -= p.speedY;
+          p.x += p.speedX;
+
+          if (p.y < 0) {
+            p.y = height;
+            p.x = Math.random() * width;
+          }
+        });
+
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+
+    /* =====================================================================
+       CUSTOM CURSOR
+       ===================================================================== */
+    function initCustomCursor() {
+      const dot = document.getElementById('cursorDot');
+      const ring = document.getElementById('cursorRing');
+      if (!dot || !ring) return;
+
+      window.addEventListener('mousemove', e => {
+        dot.style.left = e.clientX + 'px';
+        dot.style.top = e.clientY + 'px';
+        ring.style.left = e.clientX + 'px';
+        ring.style.top = e.clientY + 'px';
+      });
+
+      document.querySelectorAll('a, button, .product-card, .collection-card').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          ring.style.width = '50px';
+          ring.style.height = '50px';
+          ring.style.borderColor = '#A21E58';
+        });
+        el.addEventListener('mouseleave', () => {
+          ring.style.width = '32px';
+          ring.style.height = '32px';
+          ring.style.borderColor = '#C4A46C';
+        });
+      });
+    }
+
+    /* =====================================================================
+       PRELOADER & MOBILE DRAWER
+       ===================================================================== */
+    function dismissPreloader() {
+      const pre = document.getElementById('preloader');
+      if (pre) {
+        pre.style.opacity = '0';
+        setTimeout(() => { pre.style.visibility = 'hidden'; }, 800);
+      }
+    }
+
+    function toggleMobileNav() {
+      const d = document.getElementById('mobileDrawer');
+      d.classList.toggle('open');
+    }
+
+    function showToast(msg) {
+      let toast = document.getElementById('appToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'appToast';
+        toast.style.position = 'fixed';
+        toast.style.bottom = '24px';
+        toast.style.right = '24px';
+        toast.style.background = '#250511';
+        toast.style.color = '#E3D2AE';
+        toast.style.border = '1px solid #C4A46C';
+        toast.style.padding = '12px 20px';
+        toast.style.borderRadius = '4px';
+        toast.style.fontSize = '13px';
+        toast.style.zIndex = '999999';
+        toast.style.boxShadow = '0 10px 30px rgba(0,0,0,0.4)';
+        toast.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateY(0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+      }, 3000);
+    }
+
+    /* Set default booking date to tomorrow */
+    function initDateDefaults() {
+      const dateEl = document.getElementById('bDate');
+      if (dateEl) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        dateEl.value = tomorrow.toISOString().split('T')[0];
+      }
+    }
+
+    /* =====================================================================
+       SHOPPABLE REELS 3D COVERFLOW LOGIC
+       ===================================================================== */
+    const reelsData = [
+      {
+        id: "reel-1",
+        title: "Bridal Polki Styling",
+        occasion: "Bridal Gala",
+        video: "https://assets.mixkit.co/videos/preview/mixkit-traditional-indian-bride-dressed-in-red-48866-large.mp4",
+        poster: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
+        products: [
+          { name: "Mehrangarh Polki Choker", price: "₹6,48,200", img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=400" },
+          { name: "Padmavati Raani Haar", price: "₹9,12,400", img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=400" }
+        ]
+      },
+      {
+        id: "reel-2",
+        title: "Everyday Diamonds",
+        occasion: "Daily Luxury",
+        video: "https://assets.mixkit.co/videos/preview/mixkit-putting-on-a-diamond-ring-41223-large.mp4",
+        poster: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop",
+        products: [
+          { name: "Koh-i-Noor Solitaire Ring", price: "₹4,42,800", img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=400" },
+          { name: "Emerald-Cut Tennis Bracelet", price: "₹4,98,000", img: "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=400" }
+        ]
+      },
+      {
+        id: "reel-3",
+        title: "Festive Gold for Teej",
+        occasion: "Festivals",
+        video: "https://assets.mixkit.co/videos/preview/mixkit-woman-wearing-a-gold-necklace-41221-large.mp4",
+        poster: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1000&auto=format&fit=crop",
+        products: [
+          { name: "Hawa Mahal Filigree Necklace", price: "₹3,96,200", img: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=400" },
+          { name: "Jaipur Gokhru Gold Bangles", price: "₹7,15,600", img: "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=400" }
+        ]
+      },
+      {
+        id: "reel-4",
+        title: "Office Elegance",
+        occasion: "Work & Evening",
+        video: "https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-woman-showing-rings-41224-large.mp4",
+        poster: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1000&auto=format&fit=crop",
+        products: [
+          { name: "Dewdrop Solitaire Pendant", price: "₹1,24,600", img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=400" },
+          { name: "Aipan Geometric Gold Kada", price: "₹2,92,400", img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=400" }
+        ]
+      },
+      {
+        id: "reel-5",
+        title: "Wedding Guest Looks",
+        occasion: "Celebrations",
+        video: "https://assets.mixkit.co/videos/preview/mixkit-woman-with-golden-earrings-41222-large.mp4",
+        poster: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop",
+        products: [
+          { name: "Rajputana Polki Kada", price: "₹5,86,500", img: "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=400" },
+          { name: "Cascading Chandelier Earrings", price: "₹3,75,000", img: "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=400" }
+        ]
+      },
+      {
+        id: "reel-6",
+        title: "Gifting Guide",
+        occasion: "Milestone Gifting",
+        video: "https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-woman-putting-on-bracelets-41225-large.mp4",
+        poster: "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=1000&auto=format&fit=crop",
+        products: [
+          { name: "Surya Polki & Diamond Pendant", price: "₹1,84,000", img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=400" },
+          { name: "Navratna Astrological Ring", price: "₹1,18,500", img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=400" }
+        ]
+      }
+    ];
+
+    let activeReelIndex = 0;
+
+    function renderReelsCoverflow() {
+      const stage = document.getElementById('reelsStage');
+      const dots = document.getElementById('reelDots');
+      if (!stage) return;
+
+      stage.innerHTML = reelsData.map((r, idx) => {
+        const offset = idx - activeReelIndex;
+        let posClass = 'far-right';
+        if (offset === 0) posClass = 'active';
+        else if (offset === -1) posClass = 'side-left';
+        else if (offset === 1) posClass = 'side-right';
+        else if (offset < -1) posClass = 'far-left';
+
+        return `
+          <div class="reel-coverflow-card ${posClass}" onclick="selectReelSlide(${idx})">
+            ${idx === activeReelIndex ? `
+              <video src="${r.video}" poster="${r.poster}" autoplay muted playsinline loop></video>
+              <div style="position:absolute; top:12px; left:12px; right:12px; display:flex; justify-content:space-between; align-items:center; z-index:10;">
+                <span style="font-size:10px; font-weight:700; text-transform:uppercase; color:#E3D2AE; background:rgba(0,0,0,0.6); padding:3px 8px; border-radius:12px; border:1px solid rgba(196,164,108,0.4);">${r.occasion}</span>
+                <span style="color:#FFF; font-size:16px;">🔊</span>
+              </div>
+              <div style="position:absolute; bottom:64px; left:14px; right:14px; z-index:10;">
+                <div style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:700; color:#FFF; text-shadow:0 2px 8px rgba(0,0,0,0.8);">${r.title}</div>
+              </div>
+              <div class="reel-chips-strip">
+                ${r.products.map(p => `
+                  <a href="#shop" class="reel-chip-pill" onclick="event.stopPropagation()">
+                    <img src="${p.img}" alt="${p.name}">
+                    <div>
+                      <div style="font-weight:700; line-height:1.2;">${p.name}</div>
+                      <div style="font-size:10px; color:#E3D2AE;">${p.price}</div>
+                    </div>
+                  </a>
+                `).join('')}
+              </div>
+            ` : `
+              <img src="${r.poster}" alt="${r.title}">
+              <div style="position:absolute; inset:0; background:rgba(31,5,16,0.45); display:flex; align-items:center; justify-content:center;">
+                <div style="width:40px; height:40px; border-radius:50%; background:rgba(101,21,47,0.8); border:1px solid #C4A46C; display:flex; align-items:center; justify-content:center; color:#E3D2AE;">▶</div>
+              </div>
+            `}
+          </div>
+        `;
+      }).join('');
+
+      if (dots) {
+        dots.innerHTML = reelsData.map((_, i) => `
+          <button class="reel-dot ${i === activeReelIndex ? 'active' : ''}" onclick="selectReelSlide(${i})" aria-label="Reel ${i+1}"></button>
+        `).join('');
+      }
+    }
+
+    function nextReelSlide() {
+      activeReelIndex = (activeReelIndex + 1) % reelsData.length;
+      renderReelsCoverflow();
+    }
+
+    function prevReelSlide() {
+      activeReelIndex = (activeReelIndex - 1 + reelsData.length) % reelsData.length;
+      renderReelsCoverflow();
+    }
+
+    function selectReelSlide(idx) {
+      activeReelIndex = idx;
+      renderReelsCoverflow();
+    }
+
+    /* =====================================================================
+       INITIALIZATION
+       ===================================================================== */
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(dismissPreloader, 2200);
+      initHeroCanvas();
+      initCustomCursor();
+      initDateDefaults();
+      renderCatalog();
+      renderReelsCoverflow();
+      openPolicyTab('14-day-exchange');
+    });
+  </script>
+</body>
+
+</html>

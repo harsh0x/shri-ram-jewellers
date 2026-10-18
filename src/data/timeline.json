@@ -1,0 +1,42 @@
+[
+  {
+    "year": "1990",
+    "title": "The Wholesale Foundation",
+    "location": "Near Bikaner, Rajasthan",
+    "founder": "Shri Jai Hanuman Bamalwa",
+    "summary": "Our journey began when Shri Jai Hanuman Bamalwa started a jewellery wholesale business in a small town near Bikaner. What began as a modest enterprise grew through experience, integrity, and fair dealing across the regional trade.",
+    "quote": "Integrity is the only metal that never tarnishes.",
+    "milestoneBadge": "Foundational Roots",
+    "image": "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "year": "2001",
+    "title": "Transition to Jaipur",
+    "location": "Jaipur, Rajasthan",
+    "founder": "The Bamalwa Family",
+    "summary": "Recognising Jaipur as the historic heart of global gemstone cutting and royal Kundan-Meenakari craftsmanship, the family relocated to the Pink City to deepen artisan networks and source the finest uncut polki diamonds and Zambian emeralds.",
+    "quote": "Jaipur brought us closer to royal craftsmanship and centuries of artisan mastery.",
+    "milestoneBadge": "Artisanal Expansion",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "year": "2014",
+    "title": "First Retail Showroom",
+    "location": "Johari / M.I. Road, Jaipur",
+    "founder": "Direct-to-Customer Vision",
+    "summary": "We opened our flagship retail showroom in Jaipur to bring our heritage jewellery directly to families. We eliminated opaque middleman markups, establishing our signature philosophy: fine jewellery at fair value with total transparency.",
+    "quote": "Jewellery should be beautiful, its pricing should be fair, and customers should feel confident.",
+    "milestoneBadge": "Retail Flagship",
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "year": "Today",
+    "title": "Carrying the Legacy Forward",
+    "location": "Jaipur & Across India",
+    "founder": "Veer Bamalwa",
+    "summary": "Veer Bamalwa represents the next chapter of Jai Sri Ram Jewellers. Building on his father's bedrock of trust, his vision transforms a respected heritage business into a modern luxury house built around transparent pricing formulas, BIS HUID hallmarking, and lifelong customer care.",
+    "quote": "We preserve the strengths of a traditional family business while meeting the expectations of a new generation of jewellery buyers.",
+    "milestoneBadge": "The Modern Chapter",
+    "image": "https://images.unsplash.com/photo-1611591475152-473559194207?q=80&w=1000&auto=format&fit=crop"
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "draftNotice": {
+    "title": "DRAFT POLICY – SUBJECT TO FINAL APPROVAL & LEGAL REVIEW",
+    "message": "Important: The following customer policies are proposed drafts prepared for management approval and legal review under applicable Indian consumer-protection and e-commerce laws. They remain non-binding until final operational alignment and legal ratification.",
+    "effectiveDate": "October 2026 (Draft Formulation)",
+    "showBanner": true
+  },
+  "brandTagline": "Fine Jewellery. Fair Value. Generations of Trust.",
+  "policies": [
+    {
+      "id": "14-day-exchange",
+      "title": "14-Day Exchange Policy",
+      "tagline": "Your Choice. Your Confidence.",
+      "summary": "Exchange eligible gold, diamond, and polki jewellery within 14 days of delivery at 100% of the original invoice value without any deduction.",
+      "proposedPromise": "Exchange within 14 days at 100% of the original invoice value, without any deduction, for eligible gold, diamond and polki jewellery.",
+      "terms": [
+        "The 14-day period begins on the date of delivery recorded by the delivery provider.",
+        "The original invoice or verifiable purchase record must be provided.",
+        "The jewellery must be returned in its original, undamaged and unaltered condition, with applicable certificates, packaging and accessories.",
+        "Gold, diamond and polki jewellery will be assessed under the relevant category-specific verification process by our in-house gemologists.",
+        "Custom-made, personalised, engraved and specially commissioned jewellery may be excluded, provided the exclusions are disclosed before purchase and remain subject to applicable law.",
+        "The exchange value will be adjusted against an eligible replacement purchase. This policy does not promise a cash refund for a change of mind.",
+        "Any statutory consumer rights and remedies under Indian law remain unaffected.",
+        "Customers must contact customer support or visit our Jaipur showroom to initiate an exchange and receive return shipping instructions."
+      ],
+      "operationalNote": "Define the treatment of discounted products, missing certificates, gifts, bundled purchases, damaged packaging and category-specific exceptions before launch. No deduction should be applied to an otherwise eligible exchange promised at 100% of invoice value."
+    },
+    {
+      "id": "lifetime-buyback",
+      "title": "Lifetime Buyback Policy",
+      "tagline": "A Relationship That Lasts Beyond the Purchase",
+      "summary": "Lifetime buyback assistance for eligible jewellery based on real-time gold rates and documented stone valuation methodology.",
+      "proposedPromise": "We aim to provide lifetime buyback assistance for eligible jewellery purchased from Jai Sri Ram Jewellers, subject to physical verification and documented valuation methodology.",
+      "goldComponent": [
+        "The jewellery will be assessed for authenticity and purity using certified assaying methods.",
+        "Eligible net metal weight will be determined, strictly excluding stones, wax, enamel, non-metal components and other excluded material.",
+        "The gold component will be valued using the applicable gold rate on the date of buyback, for the verified purity (22K 916 / 18K 750) and net weight.",
+        "Any applicable processing deductions, if adopted, must be clearly defined in the final policy and disclosed before the transaction."
+      ],
+      "stoneComponent": [
+        "Stones will be assessed separately for type, authenticity, condition and relevant specifications (4Cs for diamonds, syndicate quality for polki).",
+        "Any value offered for stones will be based on the brand's documented valuation methodology and assessment of the individual item.",
+        "Stone valuation is separate from metal valuation and is not automatically equal to the original invoice value.",
+        "Where a stone cannot be reliably valued or accepted, the customer must be informed transparently before the transaction is completed."
+      ],
+      "additionalTerms": [
+        "Original invoice and available certificates (GIA, IGI, BIS) may be requested to help verify the product.",
+        "Jewellery may be subject to non-destructive ultrasonic and XRF inspection and testing.",
+        "The customer will receive the itemised proposed valuation breakdown before accepting the buyback.",
+        "Buyback is subject to applicable Indian law, government-mandated identity verification (PAN / Aadhaar where required), and internal acceptance procedures.",
+        "Any payment will be made through an approved traceable bank payment method (NEFT / RTGS / Cheque) after completion of verification and acceptance.",
+        "The lifetime buyback promise does not mean a guaranteed return of the original purchase price or making charges, taxes (GST) or promotional discounts."
+      ]
+    },
+    {
+      "id": "lifetime-maintenance",
+      "title": "Lifetime Maintenance & Repairs",
+      "tagline": "Care That Continues",
+      "summary": "Lifelong complimentary inspection, ultrasonic cleaning, and prong checks, alongside transparently quoted repair services.",
+      "proposedPromise": "Eligible jewellery purchased from Jai Sri Ram Jewellers may be presented for maintenance assessment throughout its lifetime.",
+      "terms": [
+        "Complimentary Services: Visual inspection, ultrasonic cleaning, steam cleaning, and prong tightness checks are provided complimentary for life.",
+        "Repairs, replacement stones, additional gold materials, resizing, and structural alterations may attract nominal charges.",
+        "All charges must be communicated clearly and approved by the customer before any work begins.",
+        "Normal wear and tear, accidental damage, missing stones and unauthorised alterations by third-party jewellers may not qualify for complimentary repairs.",
+        "Certain intricate designs, vintage jadau settings, or delicate enamelling construction methods may limit the repairs possible.",
+        "Customers should retain invoices and available certificates for swift verification."
+      ]
+    },
+    {
+      "id": "shipping-delivery",
+      "title": "Shipping & Insured Delivery Policy",
+      "tagline": "Safeguarded to Your Hands",
+      "summary": "100% insured, trackable delivery across India with tamper-evident packaging and delivery OTP verification.",
+      "terms": [
+        "Ready-to-Ship products are dispatched within 2 to 4 business days.",
+        "Made-to-Order and bespoke bridal commissions are dispatched within 14 to 21 business days with personal concierge updates.",
+        "All shipments are 100% insured until physical delivery OTP verification at your address.",
+        "Deliveries are fulfilled in tamper-evident security boxes via specialized high-value logistics partners (e.g., Sequel Logistics, BVC Logistics, BlueDart Apex).",
+        "Customers must inspect the outer security seal upon delivery and decline acceptance if tampering is evident.",
+        "For any delivery delays or discrepancies, our dedicated concierge team resolves issues within 24 hours."
+      ]
+    },
+    {
+      "id": "cancellation",
+      "title": "Cancellation Policy",
+      "tagline": "Clarity & Fairness",
+      "summary": "Hassle-free cancellation on ready orders before dispatch; transparent terms for customized orders.",
+      "terms": [
+        "Ready-to-ship orders may be cancelled at no fee at any time before dispatch.",
+        "Custom-made, engraved, or bespoke jewellery may be cancelled within 24 hours of order placement before gold casting begins.",
+        "Approved refunds are processed back to the original payment source within 5 to 7 business days.",
+        "Statutory rights under Indian consumer regulations are fully respected."
+      ]
+    },
+    {
+      "id": "damaged-incorrect",
+      "title": "Damaged, Defective or Incorrect Orders",
+      "tagline": "Immediate Resolution Guarantee",
+      "summary": "Dedicated priority protocol for any order issues reported within 48 hours of delivery.",
+      "terms": [
+        "Please notify our support team within 48 hours of delivery with photographs or unboxing video of the affected item.",
+        "We arrange complimentary insured reverse pickup from your doorstep.",
+        "Upon physical inspection and verification, customers are provided an immediate replacement or full adjustment per applicable law."
+      ]
+    },
+    {
+      "id": "quality-authenticity",
+      "title": "Quality & Authenticity Assurance",
+      "tagline": "Every Karat Substantiated",
+      "summary": "BIS Hallmark with 6-digit HUID on all gold; natural certified diamonds and genuine syndicate polki.",
+      "terms": [
+        "100% of gold jewellery is BIS Hallmarked with unique 6-digit HUID (Hallmark Unique Identification) laser engraved.",
+        "Diamonds are certified natural stones with IGI / GIA laboratory dossiers specifying colour, clarity, cut, and carat.",
+        "Polki jewellery is set using genuine uncut natural diamonds in 24K gold foil (Jadau technique).",
+        "Precise gross weight, net gold weight, and stone carat are documented on tax invoices.",
+        "Every transaction maintains permanent digital records to facilitate future lifetime maintenance and buyback."
+      ]
+    },
+    {
+      "id": "privacy-terms",
+      "title": "Privacy, Payments & Terms",
+      "tagline": "Confidentiality & Compliance",
+      "summary": "End-to-end encrypted transactions, RBI-compliant payment gateways, and stringent customer privacy standards.",
+      "terms": [
+        "Payment transactions are secured with 256-bit SSL encryption via RBI-approved payment gateways (Razorpay, Net Banking, UPI, Cards).",
+        "We never store full card numbers, CVVs, or banking credentials on our servers.",
+        "Customer personal details are used strictly for order fulfillment, insurance, and customer relationship communications.",
+        "Compliant with the Information Technology Act, 2000 and Digital Personal Data Protection (DPDP) standards."
+      ]
+    },
+    {
+      "id": "grievance-redressal",
+      "title": "Grievance Redressal",
+      "tagline": "Direct Family Accountability",
+      "summary": "Dedicated officer and direct escalation pathway in accordance with Indian Consumer Protection (E-Commerce) Rules, 2020.",
+      "terms": [
+        "Grievance Officer: Customer Redressal Desk, Jai Sri Ram Jewellers",
+        "Address: Jai Sri Ram Jewellers Showroom, Johari Bazar / M.I. Road, Jaipur, Rajasthan 302001, India",
+        "Email: grievance@jaisriramjewellers.com / support@jaisriramjewellers.com",
+        "Contact: +91 141 256 9090 / +91 98290 19900",
+        "Response Timeline: Acknowledgement within 48 hours; resolution within one month of receipt."
+      ]
+    }
+  ]
+}

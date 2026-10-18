@@ -1,0 +1,32 @@
+{
+  "currency": "INR",
+  "symbol": "₹",
+  "lastUpdated": "Today, 11:30 AM IST",
+  "source": "Jaipur Bullion Merchants Association Official Benchmark",
+  "rates": {
+    "gold24k": {
+      "purity": "24 Karat (999 Pure)",
+      "ratePer10g": 78450,
+      "ratePerGram": 7845,
+      "change": "+₹240"
+    },
+    "gold22k": {
+      "purity": "22 Karat (916 BIS Hallmark)",
+      "ratePer10g": 71920,
+      "ratePerGram": 7192,
+      "change": "+₹220"
+    },
+    "gold18k": {
+      "purity": "18 Karat (750 Diamond Setting)",
+      "ratePer10g": 58840,
+      "ratePerGram": 5884,
+      "change": "+₹180"
+    },
+    "silver999": {
+      "purity": "Pure Silver 999",
+      "ratePerKg": 96500,
+      "ratePerGram": 96.50,
+      "change": "+₹450"
+    }
+  }
+}

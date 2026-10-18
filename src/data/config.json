@@ -1,0 +1,31 @@
+{
+  "brandName": "Jai Sri Ram Jewellers",
+  "brandTagline": "Fine Jewellery. Fair Value. Generations of Trust.",
+  "heritageYear": 1990,
+  "headquarters": "Jaipur, Rajasthan, India",
+  "showroom": {
+    "name": "Jai Sri Ram Jewellers Heritage Showroom",
+    "addressLine1": "Near Johari Bazar & M.I. Road Crossing",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "pincode": "302001",
+    "country": "India",
+    "timings": "Monday – Sunday: 11:00 AM – 8:30 PM",
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14232.887640478059!2d75.82025875!3d26.9208035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db149021a8a25%3A0xc3b8392138aa0543!2sJohari%20Bazar%2C%20Jaipur%2C%20Rajasthan%20302003!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin",
+    "phone": "+91 141 256 9090",
+    "whatsapp": "+91 98290 19900",
+    "email": "concierge@jaisriramjewellers.com"
+  },
+  "flags": {
+    "showDraftPolicyBanner": true,
+    "enableRazorpayTestMode": true,
+    "enableLiveGoldTicker": true,
+    "enableAppointmentBooking": true
+  },
+  "razorpay": {
+    "keyId": "rzp_test_JaipurJewels2026",
+    "merchantName": "Jai Sri Ram Jewellers",
+    "currency": "INR"
+  },
+  "testimonialsPlaceholderNotice": "Notice: Reviews displayed are sample placeholders representing long-term client sentiment, ready to be substituted with verified Google Business reviews upon final client launch."
+}

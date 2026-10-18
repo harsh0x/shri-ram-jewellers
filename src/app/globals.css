@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-maroon: #65152F;
+  --color-maroon-dark: #3B0A1B;
+  --color-magenta: #A21E58;
+  --color-gold: #C4A46C;
+  --color-gold-light: #DFCA9B;
+  --color-ivory: #F7F1E8;
+  --color-ivory-dark: #ECE3D4;
+  --color-charcoal: #241C1D;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Jharokha Arch Architectural Geometry */
+.jharokha-arch {
+  clip-path: polygon(
+    0% 100%,
+    0% 30%,
+    15% 15%,
+    35% 5%,
+    50% 0%,
+    65% 5%,
+    85% 15%,
+    100% 30%,
+    100% 100%
+  );
+}
+
+.jharokha-window {
+  border-radius: 240px 240px 0 0;
+  overflow: hidden;
+}
+
+/* Gold Hairlines and Shimmer */
+.gold-hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C4A46C 50%, transparent);
+}
+
+.gold-hairline-vertical {
+  width: 1px;
+  background: linear-gradient(180deg, transparent, #C4A46C 50%, transparent);
+}
+
+.gold-border {
+  border: 1px solid rgba(196, 164, 108, 0.35);
+}
+
+.gold-glow:hover {
+  box-shadow: 0 0 25px rgba(196, 164, 108, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F1E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4A46C;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9E804B;
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide header when reels fullscreen viewer is active */
+body.reels-fullscreen-active header {
+  display: none !important;
+}
+
